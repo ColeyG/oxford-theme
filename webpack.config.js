@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   watch: true,
   output: {
-    path: path.resolve(__dirname, 'compiled'),
+    path: path.resolve(__dirname, 'public'),
     filename: './bundle.js',
   },
   module: {
