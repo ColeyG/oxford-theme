@@ -1,13 +1,21 @@
 import React from 'react';
 
 class Hi extends React.Component {
-  someMethod = () => {
-    console.log('hello');
+  constructor(props) {
+    super(props);
+    this.state = {
+      word: 'dropped',
+    };
+  }
+
+  componentDidMount() {
+    // Note: This renders dropped on the cached version
+    this.setState({ word: 'yo' });
   }
 
   render() {
     return (
-      <p onClick={this.someMethod}>hi</p>
+      <p onClick={this.someMethod}>{this.state.word}</p>
     );
   }
 }
