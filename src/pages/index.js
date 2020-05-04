@@ -1,3 +1,5 @@
 import React from 'react';
+import Hi from '../components/hi';
+import '../../styles/main.scss';
 
-export default () => <div>Hello world!</div>;
+export default () => <div><Hi /></div>;

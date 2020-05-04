@@ -1,10 +1,15 @@
 # Oxford Theme
 
-Inspired by print and print media, the _Oxford Theme_ is a static site with a customisable plugin cms base.
+Inspired by print and print media, the _Oxford Theme_ is a static site with a customisable plugin cms base built with React & Gatsby.
 
 ## Screenshots
 
 // TODO: add screenshots
+
+## Commands
+
+- `npm run dev` spins up a gatsby dev server
+- `npm run prod` create a set of static pages!
 
 ## License
 
