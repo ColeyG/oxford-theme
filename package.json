@@ -25,6 +25,8 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "./node_modules/.bin/eslint *.js src/**.js --fix; webpack --mode production",
     "dev": "webpack --mode development",
@@ -43,6 +45,9 @@
   "dependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint-plugin-import": "^2.20.2",
+    "gatsby": "^2.21.9",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
