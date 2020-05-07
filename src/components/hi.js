@@ -1,6 +1,5 @@
 // Keeping this file to leave examples of things
 import React from 'react';
-import { graphql } from 'gatsby';
 
 class Hi extends React.Component {
   constructor(props) {

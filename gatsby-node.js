@@ -18,12 +18,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  console.log('asdf');
-  actions.createPage({
-    path: 'asdf',
-    component: require.resolve('./src/components/hi.js'),
-  });
-
   actions.createPage({
     path: 'examples',
     component: require.resolve('./src/templates/example.js'),
