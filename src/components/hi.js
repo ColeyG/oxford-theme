@@ -1,4 +1,6 @@
+// Keeping this file to leave examples of things
 import React from 'react';
+import { graphql } from 'gatsby';
 
 class Hi extends React.Component {
   constructor(props) {
@@ -9,13 +11,20 @@ class Hi extends React.Component {
   }
 
   componentDidMount() {
-    // Note: This renders dropped on the cached version
+    // Note: This renders dropped on the production version
     this.setState({ word: 'yo' });
   }
 
+  // This is also not rendered
+  arbitrary = () => 'arbitratry'
+
   render() {
+    // Something like this could fetch data.
+    const renderConst = this.arbitrary();
+    // const renderData = this.querySomeData();
+
     return (
-      <p onClick={this.someMethod}>{this.state.word}</p>
+      <p onClick={this.someMethod}>{this.state.word}. {this.arbitrary}. {renderConst}.</p>
     );
   }
 }
