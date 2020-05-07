@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{KGCn:function(n,e,a){"use strict";a.r(e),a.d(e,"default",(function(){return o})),a.d(e,"query",(function(){return r}));a("f3/d");var t=a("q1tI"),l=a.n(t);function o(n){var e=n.data;return console.log(e.allPokemon),l.a.createElement("div",null,l.a.createElement("h1",null,"Example Area:"),l.a.createElement("p",null,e.allPokemon.nodes[0].name))}var r="1792072726"}}]);
-//# sourceMappingURL=component---src-templates-example-js-fe2a0541615aeb20dc3a.js.map
