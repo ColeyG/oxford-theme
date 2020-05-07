@@ -17,7 +17,7 @@ All rights are reserved to their respective creators. You can license a copy of 
 
 ## Project Tracking
 
-Project assets are hosted here: https://drive.google.com/drive/folders/12V9GKE85i06aBOf5SLbEkPRbQmqnlRHn?usp=sharing
+Project assets are hosted [here](https://drive.google.com/drive/folders/12V9GKE85i06aBOf5SLbEkPRbQmqnlRHn?usp=sharing)
 
 ## Credits
 
