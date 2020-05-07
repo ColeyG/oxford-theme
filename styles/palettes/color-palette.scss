@@ -1,0 +1,32 @@
+$initial-color-palette: (
+  "black": #16161d,
+  "white": white,
+  "onyx": #393D3F,
+  "ivory": #FFFFF2,
+  "blue": #49C5B6,
+  "red": #F15E5E,
+  "purple": #8154EF,
+  "green": #56E39F,
+  "yellow": #FFBE0B,
+  "orange": #FB5607,
+);
+
+// A sensibly bound set of colors related to their purpose against the initial color palette
+// Colors not bound here should not be accessible to other parts of the system
+$normalized-color-palette: (
+  "black": "onyx",
+  "white": "white",
+  "primary": "blue",
+  "secondary": "red",
+  "tertiary": "purple",
+  "success": "green",
+  "warning": "yellow",
+  "failure": "orange",
+);
+
+$color-palette: $normalized-color-palette;
+
+// Binding the color function to return context based color bindings. IE: color('primary')
+@function color($value, $map: $normalized-color-palette) {
+  @return map-get($initial-color-palette, map-get($map, $value));
+}

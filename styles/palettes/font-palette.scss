@@ -1,0 +1,36 @@
+$fallback-family: 'Jost', sans-serif;
+
+$initial-font-palette: (
+  "jost": ('Jost', sans-serif),
+  "noto-sans": ('Noto Sans SC', sans-serif),
+  "ubuntu-mono": ('Ubuntu Mono', monospace),
+  );
+
+$normalized-font-palette: (
+  "primary-large": (
+    "color": color('black'),
+    "size": 32pt,
+    "weight": normal,
+    "family": "jost",
+  ),
+);
+
+// Old typeface mixin
+@mixin typeface($color: $black, $size: 16pt, $weight: normal, $family: $fallback-family) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+@mixin font($value) {
+  $font-palette: map-get($normalized-font-palette, $value);
+  color: map-get($font-palette, 'color');
+  font-size: map-get($font-palette, 'size');
+  font-weight: map-get($font-palette, 'weight');
+  font-family: map-get($initial-font-palette, map-get($font-palette, 'family'));
+}
+
+h1 {
+  @include font('primary-large');
+}

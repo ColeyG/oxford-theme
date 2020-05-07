@@ -1,21 +1,15 @@
-// Cold Lib SCSS V0.0.2
+// Cold Lib SCSS V0.0.3
 
-$default-map: (
-  "xxsmall": 320px,
-  "xsmall": 500px,
-  "small": 700px,
-  "medium": 1000px,
-  "large": 1200px,
-  "xlarge": 1500px,
-);
+// Importing the Eric Meyer Reset as a base (Public Domain)
+@import "./misc/reset.css";
 
-$default-colors: (
-  "black": #16161d,
-  "white": white,
-);
+// Pallette Imports: Structured imports of expected palette maps
+@import "./palettes/breakpoint-palette.scss";
+@import "./palettes/color-palette.scss";
+@import "./palettes/font-palette.scss";
 
-@function break($value, $map: $default-map, $max: false) {
-  $width: map-get($default-map, $value);
+@function break($value, $map: $default-break-map, $max: false) {
+  $width: map-get($default-break-map, $value);
   @if $max {
     @return "max-width: #{$width}";
   } @else {
@@ -23,14 +17,10 @@ $default-colors: (
   }
 }
 
-@mixin breakpoint($value, $down: false, $map: $default-map) {
+@mixin breakpoint($value, $down: false, $map: $default-break-map) {
   @media screen and (break($value, $max: $down)) {
     @content;
   }
-}
-
-@function color($value, $map: $default-colors) {
-  @return map-get($map, $value);
 }
 
 @mixin button-normalize() {
