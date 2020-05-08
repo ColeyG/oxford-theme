@@ -6,12 +6,13 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Hi from '../components/hi';
+import Styleguide from '../components/styleguide';
 // import Layout from "../components";
 
 export default function Example({ data }) {
   console.log(data.allPokemon);
   return (
-    <div>
+    <div className='wrapper'>
       {/* Example of overrriding the base title */}
       <Helmet>
         <title>
@@ -24,6 +25,7 @@ export default function Example({ data }) {
       <p>Type: {data.pokemon.type}</p>
       <p>ID: {data.pokemon.id}</p>
       <Hi />
+      <Styleguide />
     </div>
   );
 }

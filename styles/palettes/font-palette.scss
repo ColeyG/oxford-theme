@@ -13,7 +13,33 @@ $normalized-font-palette: (
     "weight": normal,
     "family": "jost",
   ),
+  "primary-medium": (
+    "color": color('black'),
+    "size": 26pt,
+    "weight": normal,
+    "family": "jost",
+  ),
+  "primary-small": (
+    "color": color('black'),
+    "size": 18pt,
+    "weight": normal,
+    "family": "jost",
+  ),
+  "primary-xsmall": (
+    "color": color('black'),
+    "size": 16pt,
+    "weight": 500,
+    "family": "jost",
+  ),
+  "body": (
+    "color": color('black'),
+    "size": 12pt,
+    "weight": normal,
+    "family": "noto-sans",
+  ),
 );
+
+$font-palette: $normalized-font-palette;
 
 // Old typeface mixin
 @mixin typeface($color: $black, $size: 16pt, $weight: normal, $family: $fallback-family) {
@@ -31,6 +57,27 @@ $normalized-font-palette: (
   font-family: map-get($initial-font-palette, map-get($font-palette, 'family'));
 }
 
-h1 {
+h1, h2 {
   @include font('primary-large');
+}
+
+h3 {
+  @include font('primary-medium')
+}
+
+h4 {
+  @include font('primary-small');
+}
+
+h5, h6 {
+  @include font('primary-xsmall');
+}
+
+p {
+  @include font('body');
+  line-height: 18px;
+}
+
+em, strong, i {
+  font-style: italic;
 }

@@ -1,0 +1,13 @@
+$initial-spacing-palette: (
+  "gutter": 1.5rem,
+);
+
+$normalized-spacing-palette: (
+  "gutter": "gutter",
+);
+
+$spacing-palette: $normalized-spacing-palette;
+
+@function spacing($value, $map: $normalized-spacing-palette) {
+  @return map-get($initial-spacing-palette, map-get($map, $value));
+}

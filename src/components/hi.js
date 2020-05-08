@@ -23,7 +23,7 @@ class Hi extends React.Component {
     // const renderData = this.querySomeData();
 
     return (
-      <p onClick={this.someMethod}>{this.state.word}. {this.arbitrary}. {renderConst}.</p>
+      <p onClick={this.someMethod}>{this.state.word}. {this.arbitrary()}. {renderConst}.</p>
     );
   }
 }
