@@ -3,6 +3,7 @@
 */
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Hi from '../components/hi';
 // import Layout from "../components";
@@ -11,6 +12,12 @@ export default function Example({ data }) {
   console.log(data.allPokemon);
   return (
     <div>
+      {/* Example of overrriding the base title */}
+      <Helmet>
+        <title>
+          Example Title
+        </title>
+      </Helmet>
       <Header mainTitle="Example Page" />
       <p>Testing Gatsby Rendering</p>
       <p>Name: {data.pokemon.name}</p>
