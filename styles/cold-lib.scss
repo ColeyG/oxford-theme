@@ -15,6 +15,7 @@
 
 // Component Imports: Styled Out-of-the-Box components that come with cold-lib
 @import "./components/styleguide.scss";
+@import "./components/header.scss";
 
 @function break($value, $map: $default-break-map, $max: false) {
   $width: map-get($default-break-map, $value);
