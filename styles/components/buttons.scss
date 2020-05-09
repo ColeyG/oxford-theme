@@ -1,0 +1,16 @@
+@mixin button($color: color("primary")) {
+  @include button-normalize();
+  background-color: $color;
+}
+
+.cl-button-primary {
+  @include button();
+}
+
+.cl-button-secondary {
+  @include button(color("secondary"));
+}
+
+.cl-button-tertiary {
+  @include button(color("tertiary"));
+}

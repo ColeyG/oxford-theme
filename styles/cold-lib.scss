@@ -16,6 +16,7 @@
 // Component Imports: Styled Out-of-the-Box components that come with cold-lib
 @import "./components/styleguide.scss";
 @import "./components/header.scss";
+@import "./components/buttons.scss";
 
 @function break($value, $map: $default-break-map, $max: false) {
   $width: map-get($default-break-map, $value);
@@ -30,14 +31,6 @@
   @media screen and (break($value, $max: $down)) {
     @content;
   }
-}
-
-@mixin button-normalize() {
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
 }
 
 @mixin input-normalize() {

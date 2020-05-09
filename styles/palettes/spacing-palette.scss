@@ -8,6 +8,20 @@ $normalized-spacing-palette: (
 
 $spacing-palette: $normalized-spacing-palette;
 
-@function spacing($value, $map: $normalized-spacing-palette) {
-  @return map-get($initial-spacing-palette, map-get($map, $value));
+@function spacing($value, $direction: null, $map: $normalized-spacing-palette) {
+  @if $direction == null {
+    @return map-get($initial-spacing-palette, map-get($map, $value));
+  } @else {
+    // Direction param passed
+    $amoun: map-get($initial-spacing-palette, map-get($map, $value));
+    $directions: (
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+    );
+
+    // TODO: Actually parse directions
+    @return "red";
+  }
 }

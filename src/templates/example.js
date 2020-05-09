@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Hi from '../components/hi';
 import Styleguide from '../components/styleguide';
-// import Layout from "../components";
 
 export default function Example({ data }) {
   console.log(data.allPokemon);
@@ -20,11 +19,13 @@ export default function Example({ data }) {
         </title>
       </Helmet>
       <Header mainTitle="Example Page" />
-      <p>Testing Gatsby Rendering</p>
-      <p>Name: {data.pokemon.name}</p>
-      <p>Type: {data.pokemon.type}</p>
-      <p>ID: {data.pokemon.id}</p>
-      <Hi />
+      <div className="testing">
+        <p>Testing Gatsby Rendering</p>
+        <p>Name: {data.pokemon.name}</p>
+        <p>Type: {data.pokemon.type}</p>
+        <p>ID: {data.pokemon.id}</p>
+        <Hi />
+      </div>
       <Styleguide />
     </div>
   );

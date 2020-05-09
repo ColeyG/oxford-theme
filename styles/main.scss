@@ -1,4 +1,7 @@
 @import "./cold-lib.scss";
 body {
-  background-color: color('white');
+  background-color: color("white");
+}
+.testing {
+  padding: spacing("gutter", $direction: "lr");
 }
