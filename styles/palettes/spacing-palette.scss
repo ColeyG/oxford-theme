@@ -1,5 +1,5 @@
 $initial-spacing-palette: (
-  "gutter": 1.5rem,
+  "gutter": 20px,
 );
 
 $normalized-spacing-palette: (
@@ -13,15 +13,29 @@ $spacing-palette: $normalized-spacing-palette;
     @return map-get($initial-spacing-palette, map-get($map, $value));
   } @else {
     // Direction param passed
-    $amoun: map-get($initial-spacing-palette, map-get($map, $value));
-    $directions: (
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-    );
+    $renderedVal: map-get($initial-spacing-palette, map-get($map, $value));
+    $rs: "";
+    @if (str-index($direction, "t")) {
+      $rs: $rs + $renderedVal + " ";
+    } @else {
+      $rs: $rs + "0 ";
+    }
+    @if (str-index($direction, "r")) {
+      $rs: $rs + $renderedVal + " ";
+    } @else {
+      $rs: $rs + "0 ";
+    }
+    @if (str-index($direction, "b")) {
+      $rs: $rs + $renderedVal + " ";
+    } @else {
+      $rs: $rs + "0 ";
+    }
+    @if (str-index($direction, "l")) {
+      $rs: $rs + $renderedVal;
+    } @else {
+      $rs: $rs + "0";
+    }
 
-    // TODO: Actually parse directions
-    @return "red";
+    @return unquote($rs);
   }
 }
