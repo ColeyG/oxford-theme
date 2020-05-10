@@ -47,6 +47,7 @@ class Styleguide extends React.Component {
             <h2>Buttons</h2>
             <hr />
             <p>assorted buttons</p>
+            <hr />
             <button className="cl-button-primary">Primary</button>
             <button className="cl-button-secondary">Primary</button>
             <button className="cl-button-tertiary">Primary</button>

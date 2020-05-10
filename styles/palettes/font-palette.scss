@@ -1,38 +1,47 @@
-$fallback-family: 'Jost', sans-serif;
+$fallback-family: "Jost", sans-serif;
 
 $initial-font-palette: (
-  "jost": ('Jost', sans-serif),
-  "noto-sans": ('Noto Sans SC', sans-serif),
-  "ubuntu-mono": ('Ubuntu Mono', monospace),
-  );
+  "jost": (
+    "Jost",
+    sans-serif,
+  ),
+  "noto-sans": (
+    "Noto Sans SC",
+    sans-serif,
+  ),
+  "ubuntu-mono": (
+    "Ubuntu Mono",
+    monospace,
+  ),
+);
 
 $normalized-font-palette: (
   "primary-large": (
-    "color": color('black'),
+    "color": color("black"),
     "size": 32pt,
     "weight": normal,
     "family": "jost",
   ),
   "primary-medium": (
-    "color": color('black'),
+    "color": color("black"),
     "size": 26pt,
     "weight": normal,
     "family": "jost",
   ),
   "primary-small": (
-    "color": color('black'),
+    "color": color("black"),
     "size": 18pt,
     "weight": normal,
     "family": "jost",
   ),
   "primary-xsmall": (
-    "color": color('black'),
+    "color": color("black"),
     "size": 16pt,
     "weight": 500,
     "family": "jost",
   ),
   "body": (
-    "color": color('black'),
+    "color": color("black"),
     "size": 12pt,
     "weight": normal,
     "family": "noto-sans",
@@ -51,33 +60,37 @@ $font-palette: $normalized-font-palette;
 
 @mixin font($value) {
   $font-palette: map-get($normalized-font-palette, $value);
-  color: map-get($font-palette, 'color');
-  font-size: map-get($font-palette, 'size');
-  font-weight: map-get($font-palette, 'weight');
-  font-family: map-get($initial-font-palette, map-get($font-palette, 'family'));
+  color: map-get($font-palette, "color");
+  font-size: map-get($font-palette, "size");
+  font-weight: map-get($font-palette, "weight");
+  font-family: map-get($initial-font-palette, map-get($font-palette, "family"));
 }
 
-h1, h2 {
-  @include font('primary-large');
+h1,
+h2 {
+  @include font("primary-large");
 }
 
 h3 {
-  @include font('primary-medium')
+  @include font("primary-medium");
 }
 
 h4 {
-  @include font('primary-small');
+  @include font("primary-small");
 }
 
-h5, h6 {
-  @include font('primary-xsmall');
+h5,
+h6 {
+  @include font("primary-xsmall");
 }
 
 p {
-  @include font('body');
+  @include font("body");
   line-height: 18px;
 }
 
-em, strong, i {
+em,
+strong,
+i {
   font-style: italic;
 }

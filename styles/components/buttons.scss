@@ -1,5 +1,8 @@
 @mixin button($color: color("primary")) {
   @include button-normalize();
+  border-radius: 150px;
+  margin: spacing("gutter", "rb");
+  padding: 15px 30px;
   background-color: $color;
 }
 

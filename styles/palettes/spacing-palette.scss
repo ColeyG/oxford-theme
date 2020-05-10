@@ -1,9 +1,11 @@
 $initial-spacing-palette: (
   "gutter": 20px,
+  "button-padding": 30px,
 );
 
 $normalized-spacing-palette: (
   "gutter": "gutter",
+  "button-padding": "button-padding",
 );
 
 $spacing-palette: $normalized-spacing-palette;
