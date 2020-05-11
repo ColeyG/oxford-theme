@@ -1,0 +1,40 @@
+// Forms are something that are sorta just built out of the box since they are seperate use cases across sites most often.
+// Default form styles are applied here.
+@mixin cl-form() {
+  padding: spacing("form-margin", "tb");
+  input,
+  textarea,
+  button {
+    margin: spacing("form-margin", "rb");
+  }
+}
+
+@mixin cl-input($resizable: false) {
+  @include font("form-inputs");
+  border: none;
+  background-color: rgba(color("black"), 0.15);
+  padding: spacing("input-text-padding");
+  border-radius: 7px;
+  box-shadow: 0 0 3px inset rgba(color("black"), 0.25);
+  @if ($resizable == false) {
+    resize: none;
+  }
+}
+
+@mixin cl-label() {
+  @include font("form-labels");
+}
+
+.cl-form {
+  @include cl-form();
+}
+
+.cl-input,
+.cl-textarea {
+  @include cl-input();
+}
+
+.cl-label {
+  @include cl-label();
+  margin: spacing("input-text-padding");
+}

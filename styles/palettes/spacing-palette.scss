@@ -1,11 +1,15 @@
 $initial-spacing-palette: (
   "gutter": 20px,
   "button-padding": 30px,
+  "form-margin": 20px,
+  "input-text-padding": 10px,
 );
 
 $normalized-spacing-palette: (
   "gutter": "gutter",
   "button-padding": "button-padding",
+  "form-margin": "form-margin",
+  "input-text-padding": "input-text-padding",
 );
 
 $spacing-palette: $normalized-spacing-palette;

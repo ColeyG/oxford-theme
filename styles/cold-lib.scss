@@ -17,6 +17,7 @@
 @import "./components/styleguide.scss";
 @import "./components/header.scss";
 @import "./components/buttons.scss";
+@import "./components/forms.scss";
 
 @function break($value, $map: $default-break-map, $max: false) {
   $width: map-get($default-break-map, $value);
@@ -31,10 +32,6 @@
   @media screen and (break($value, $max: $down)) {
     @content;
   }
-}
-
-@mixin input-normalize() {
-  border: none;
 }
 
 @mixin center-article() {

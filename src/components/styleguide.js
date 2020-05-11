@@ -52,6 +52,21 @@ class Styleguide extends React.Component {
             <button className="cl-btn-secondary">Secondary</button>
             <button className="cl-btn-tertiary">Tertiary</button>
           </div>
+          <div>
+            <h2>Forms</h2>
+            <hr />
+            <p>Form Elements</p>
+            <form action="" className='cl-form'>
+              <label htmlFor="name" className="cl-label">Name</label>
+              <input className="cl-input" type="text" name="name" id="name" placeholder="Earl Jones" />
+              <label htmlFor="message" className="cl-label">Enter a Message</label>
+              <textarea className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message" placeholder="lorem ipsum..."></textarea>
+              <button className="cl-btn-primary">Submit</button>
+            </form>
+          </div>
+          <div>
+            <h2>Cards</h2>
+          </div>
         </div>
       </div>
     );

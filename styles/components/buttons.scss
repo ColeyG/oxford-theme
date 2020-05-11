@@ -5,7 +5,7 @@
   padding: 10px 25px;
   background-color: $color;
   transition: 0.2s;
-  box-shadow: 0 0 3px inset rgba(color("black"), 0.5);
+  box-shadow: 0 0 3px inset rgba(color("black"), 0.25);
   &:hover {
     background-color: darken($color, 10%);
   }

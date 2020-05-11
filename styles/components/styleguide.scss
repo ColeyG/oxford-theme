@@ -6,4 +6,7 @@
   button {
     margin: spacing("gutter", "rb");
   }
+  form {
+    @include flex-s-s-c();
+  }
 }
