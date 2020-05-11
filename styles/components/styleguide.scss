@@ -3,4 +3,7 @@
   hr {
     margin-bottom: 5px;
   }
+  button {
+    margin: spacing("gutter", "rb");
+  }
 }

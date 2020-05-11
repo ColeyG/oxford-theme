@@ -1,19 +1,24 @@
 @mixin button($color: color("primary")) {
   @include button-normalize();
+  @include font("button");
   border-radius: 150px;
-  margin: spacing("gutter", "rb");
-  padding: 15px 30px;
+  padding: 10px 25px;
   background-color: $color;
+  transition: 0.2s;
+  box-shadow: 0 0 3px inset rgba(color("black"), 0.5);
+  &:hover {
+    background-color: darken($color, 10%);
+  }
 }
 
-.cl-button-primary {
+.cl-btn-primary {
   @include button();
 }
 
-.cl-button-secondary {
+.cl-btn-secondary {
   @include button(color("secondary"));
 }
 
-.cl-button-tertiary {
+.cl-btn-tertiary {
   @include button(color("tertiary"));
 }

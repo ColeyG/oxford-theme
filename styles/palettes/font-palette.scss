@@ -46,6 +46,12 @@ $normalized-font-palette: (
     "weight": normal,
     "family": "noto-sans",
   ),
+  "button": (
+    "color": color("white"),
+    "size": 12pt,
+    "weight": normal,
+    "family": "noto-sans",
+  ),
 );
 
 $font-palette: $normalized-font-palette;
