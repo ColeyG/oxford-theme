@@ -1,4 +1,24 @@
 // Components are target css classes that are intended to be fully reusable with easy to replicate html structures.
 .cl-primary-header {
-  padding: spacing("gutter");
+  padding: spacing("gutter", "tb");
+  margin: spacing("gutter", "lrb");
+  border-bottom: 2px solid color("black");
+  display: flex;
+  justify-content: space-between;
+  .head-logo {
+    text-decoration: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    li {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

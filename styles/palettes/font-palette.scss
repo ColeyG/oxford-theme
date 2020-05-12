@@ -84,6 +84,7 @@ $font-palette: $normalized-font-palette;
   font-family: map-get($initial-font-palette, map-get($font-palette, "family"));
 }
 
+// TODO: Make this a component, it really isn't a palette
 h1,
 h2 {
   @include font("primary-large");
@@ -105,6 +106,29 @@ h6 {
 p {
   @include font("body");
   line-height: 18px;
+  a,
+  .primary {
+    color: color("black");
+    font-weight: 800;
+    text-decoration: none;
+    height: 11px;
+    border-bottom: 7px solid rgba(color("primary"), 0.5);
+    display: inline-block;
+    padding: 0 2px;
+  }
+  .secondary {
+    border-bottom: 7px solid rgba(color("secondary"), 0.5);
+  }
+  .tertiary {
+    border-bottom: 7px solid rgba(color("tertiary"), 0.5);
+  }
+}
+
+a {
+  @include font("body");
+  line-height: 18px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 em,
