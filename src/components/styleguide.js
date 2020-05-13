@@ -30,10 +30,10 @@ class Styleguide extends React.Component {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Totam perspiciatis, <a href="#">non dolore</a> in facere asperiores omnis atque optio, dignissimos rem quod obcaecati nulla quia veniam, eligendi iste praesentium. Reiciendis dolor velit quasi quam.
-            Voluptates, perferendis modi earum cum id atque <a href="#" className="secondary">dolorem praesentium</a>.
+            Voluptates, perferendis modi earum cum id atque <a href="#" className="cl-a-secondary">dolorem praesentium</a>.
             Architecto enim magni debitis animi laudantium culpa quis tenetur, odio velit tempora maiores dignissimos dolorem saepe consequuntur recusandae voluptatum, itaque rerum eligendi quo ad accusantium unde laboriosam ratione!
             Magnam soluta perspiciatis labore perferendis inventore, et ab vero eveniet aliquid delectus dignissimos molestiae voluptatem consequuntur ipsum nulla ipsa maiores qui illum porro excepturi ratione quos laborum enim. Ipsa nulla maxime suscipit dicta! Ipsum quam sequi animi neque accusamus facere natus asperiores quo.
-            At, <a href="#" className="tertiary">doloremque voluptatibus</a> explicabo odio adipisci cupiditate consequuntur illo itaque molestias nam quo iure. Provident voluptate rem soluta blanditiis autem tenetur inventore, eos a nulla fugit asperiores perferendis accusantium tempora iste nemo harum, sed sunt repellat! Dignissimos, repellendus molestias quae incidunt fugiat consequuntur, doloremque suscipit impedit mollitia illum sapiente rem laboriosam ex quam perspiciatis illo libero est magnam? Placeat possimus quaerat adipisci, doloremque accusamus voluptate pariatur! Aperiam veritatis saepe neque accusamus, non praesentium numquam ipsum dolores perferendis suscipit eligendi quis sapiente, doloribus, nisi quibusdam corporis doloremque facilis.
+            At, <a href="#" className="cl-a-tertiary">doloremque voluptatibus</a> explicabo odio adipisci cupiditate consequuntur illo itaque molestias nam quo iure. Provident voluptate rem soluta blanditiis autem tenetur inventore, eos a nulla fugit asperiores perferendis accusantium tempora iste nemo harum, sed sunt repellat! Dignissimos, repellendus molestias quae incidunt fugiat consequuntur, doloremque suscipit impedit mollitia illum sapiente rem laboriosam ex quam perspiciatis illo libero est magnam? Placeat possimus quaerat adipisci, doloremque accusamus voluptate pariatur! Aperiam veritatis saepe neque accusamus, non praesentium numquam ipsum dolores perferendis suscipit eligendi quis sapiente, doloribus, nisi quibusdam corporis doloremque facilis.
           </p>
           <hr />
           <p>
@@ -70,6 +70,9 @@ class Styleguide extends React.Component {
           </div>
           <div>
             <h2>Cards</h2>
+          </div>
+          <div>
+            <h2>Footer</h2>
           </div>
         </div>
       </div>

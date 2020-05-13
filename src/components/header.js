@@ -10,10 +10,10 @@ class Header extends React.Component {
         </Link>
         <nav>
           <ul>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#" className="cl-a-primary">Work</a></li>
+            <li><a href="#" className="cl-a-secondary">Resume</a></li>
+            <li><a href="#" className="cl-a-tertiary">Contact</a></li>
+            <li><a href="#" className="cl-a-reverse">Blog</a></li>
           </ul>
         </nav>
       </header>

@@ -18,6 +18,7 @@
 @import "./components/header.scss";
 @import "./components/buttons.scss";
 @import "./components/forms.scss";
+@import "./components/footer.scss";
 
 @function break($value, $map: $default-break-map, $max: false) {
   $width: map-get($default-break-map, $value);

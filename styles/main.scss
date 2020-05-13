@@ -1,6 +1,10 @@
 @import "./cold-lib.scss";
 body {
   background-color: color("white");
+  #___gatsby #gatsby-focus-wrapper .wrapper {
+    border: 1px solid red;
+    // TODO: Footer Solution
+  }
 }
 .testing {
   padding: spacing("gutter", $direction: "lr");

@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Hi from '../components/hi';
 import Styleguide from '../components/styleguide';
+import Footer from '../components/footer';
 
 export default function Example({ data }) {
   console.log(data.allPokemon);
@@ -27,6 +28,7 @@ export default function Example({ data }) {
         <Hi />
       </div>
       <Styleguide />
+      <Footer />
     </div>
   );
 }
