@@ -12,22 +12,24 @@ import Footer from '../components/footer';
 export default function Example({ data }) {
   console.log(data.allPokemon);
   return (
-    <div className='wrapper'>
-      {/* Example of overrriding the base title */}
-      <Helmet>
-        <title>
-          Example Title
-        </title>
-      </Helmet>
-      <Header mainTitle="Example Page" />
-      <div className="testing">
-        <p>Testing Gatsby Rendering</p>
-        <p>Name: {data.pokemon.name}</p>
-        <p>Type: {data.pokemon.type}</p>
-        <p>ID: {data.pokemon.id}</p>
-        <Hi />
+    <div className="cl-wrapper">
+      <div className="cl-page">
+        {/* Example of overrriding the base title */}
+        <Helmet>
+          <title>
+            Example Title
+          </title>
+        </Helmet>
+        <Header mainTitle="Example Page" />
+        <div className="testing">
+          <p>Testing Gatsby Rendering</p>
+          <p>Name: {data.pokemon.name}</p>
+          <p>Type: {data.pokemon.type}</p>
+          <p>ID: {data.pokemon.id}</p>
+          <Hi />
+        </div>
+        <Styleguide />
       </div>
-      <Styleguide />
       <Footer />
     </div>
   );
