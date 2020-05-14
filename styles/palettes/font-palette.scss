@@ -64,6 +64,12 @@ $normalized-font-palette: (
     "weight": normal,
     "family": "jost",
   ),
+  "not-found": (
+    "color": color("black"),
+    "size": 250px,
+    "weight": normal,
+    "family": "ubuntu-mono",
+  ),
 );
 
 $font-palette: $normalized-font-palette;

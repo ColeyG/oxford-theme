@@ -5,3 +5,21 @@ body {
 .testing {
   padding: spacing("gutter", $direction: "lr");
 }
+.page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: spacing("gutter");
+  a h1 {
+    height: 60px;
+    @include font("not-found");
+    border-bottom: 75px solid rgba(color("primary"), 0.35);
+    padding: spacing("gutter", "lr");
+    margin-bottom: spacing("gutter");
+    @include breakpoint("small", $down: true) {
+      height: 20px;
+      font-size: 150px;
+    }
+  }
+}
