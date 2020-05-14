@@ -5,21 +5,34 @@
   border-bottom: 2px solid color("black");
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @include breakpoint('small', $down: true) {
+    flex-direction: column;
+    height: 75px;
+  }
   .head-logo {
     text-decoration: none;
   }
-  nav ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    height: 100%;
-    li {
-      height: 100%;
+  nav { 
+    align-self: flex-end;
+    ul {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      margin-left: 15px;
+      flex-direction: row;
+      height: 100%;
+      li {
+        @include breakpoint('xsmall', $down: true) {
+          a {
+            font-size: 10pt;
+          }
+        }
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+      }
     }
   }
 }

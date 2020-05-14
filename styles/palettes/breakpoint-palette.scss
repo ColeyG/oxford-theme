@@ -6,3 +6,18 @@ $default-break-map: (
   "large": 1200px,
   "xlarge": 1500px,
 );
+
+@function break($value, $map: $default-break-map, $max: false) {
+  $width: map-get($default-break-map, $value);
+  @if $max {
+    @return "max-width: #{$width}";
+  } @else {
+    @return "min-width: #{$width}";
+  }
+}
+
+@mixin breakpoint($value, $down: false, $map: $default-break-map) {
+  @media screen and (break($value, $max: $down)) {
+    @content;
+  }
+}
