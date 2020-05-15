@@ -1,0 +1,9 @@
+@mixin cl-jumbotron {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+}
+
+.cl-jumbotron {
+  @include cl-jumbotron();
+}

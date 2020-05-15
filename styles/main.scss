@@ -3,7 +3,7 @@ body {
   background-color: color("white");
 }
 .testing {
-  padding: spacing("gutter", $direction: "lr");
+  padding: spacing("gutter", $direction: "t");
 }
 .page-not-found {
   display: flex;

@@ -32,6 +32,8 @@
 @mixin cl-page() {
   width: 100%;
   flex-grow: 999999;
+  padding: spacing("gutter");
+  box-sizing: border-box;
 }
 
 .cl-wrapper {

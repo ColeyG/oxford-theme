@@ -1,19 +1,18 @@
 // Components are target css classes that are intended to be fully reusable with easy to replicate html structures.
 .cl-primary-header {
-  padding: spacing("gutter", "tb");
-  margin: spacing("gutter", "lrb");
+  padding: spacing("gutter", "b");
   border-bottom: 2px solid color("black");
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @include breakpoint('small', $down: true) {
+  @include breakpoint("small", $down: true) {
     flex-direction: column;
     height: 75px;
   }
   .head-logo {
     text-decoration: none;
   }
-  nav { 
+  nav {
     align-self: flex-end;
     ul {
       display: flex;
@@ -22,7 +21,7 @@
       flex-direction: row;
       height: 100%;
       li {
-        @include breakpoint('xsmall', $down: true) {
+        @include breakpoint("xsmall", $down: true) {
           a {
             font-size: 10pt;
           }
