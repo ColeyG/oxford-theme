@@ -13,6 +13,7 @@
 
 // Importing the Eric Meyer (https://meyerweb.com/eric/) Reset as a base (Public Domain)
 @import "./cold-lib/misc/reset.css";
+// FIXME: @import is going to be replaced by eoy 2021
 
 // Pallette Imports: Structured imports of expected palette maps
 @import "./cold-lib/palettes/breakpoint-palette.scss";
