@@ -1,0 +1,50 @@
+// Cold Lib SCSS V0.0.5
+
+/***************************************/
+/* Cold Lib is my (Cole Geerts https://colegeerts.com) "Bootstrap-esque" sass library 
+   with focusing on creating a default theme with potential retheming options.
+   Although I want this project to become standalone one day, most of it's effort
+   and contributions have happened over the course of other projects. Sort of 
+   like a leech per se. As such some of what appears here is project-specific,
+   but as the version number increments with big changes, that will happen less
+   and less.
+   */
+/***************************************/
+
+// Importing the Eric Meyer (https://meyerweb.com/eric/) Reset as a base (Public Domain)
+@import "./cold-lib/misc/reset.css";
+
+// Pallette Imports: Structured imports of expected palette maps
+@import "./cold-lib/palettes/breakpoint-palette.scss";
+@import "./cold-lib/palettes/color-palette.scss";
+@import "./cold-lib/palettes/font-palette.scss";
+@import "./cold-lib/palettes/spacing-palette.scss";
+
+// Mixin Imports: Collections of mixins to include in the site specific styles
+@import "./cold-lib/mixins/flex.scss";
+@import "./cold-lib/mixins/utility.scss";
+
+// Component Imports: Styled Out-of-the-Box components that come with cold-lib
+@import "./cold-lib/components/styleguide.scss";
+@import "./cold-lib/components/header.scss";
+@import "./cold-lib/components/buttons.scss";
+@import "./cold-lib/components/forms.scss";
+@import "./cold-lib/components/footer.scss";
+@import "./cold-lib/components/fonts.scss";
+
+@mixin center-article() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  article,
+  .article,
+  .article-center {
+    position: relative;
+    max-width: 1200px;
+  }
+}
+
+hr {
+  border: none;
+}
