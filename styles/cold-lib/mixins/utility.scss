@@ -20,6 +20,7 @@
 }
 
 // Page and Body Wrappers
+// TODO: Create a "layout" component with the following:
 
 @mixin cl-wrapper() {
   min-height: 100vh;
