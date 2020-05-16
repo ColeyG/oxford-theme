@@ -3,6 +3,7 @@ $initial-spacing-palette: (
   "button-padding": 30px,
   "form-margin": 20px,
   "input-text-padding": 10px,
+  "footer": 15px,
 );
 
 $normalized-spacing-palette: (
@@ -10,6 +11,7 @@ $normalized-spacing-palette: (
   "button-padding": "button-padding",
   "form-margin": "form-margin",
   "input-text-padding": "input-text-padding",
+  "footer": "footer",
 );
 
 $spacing-palette: $normalized-spacing-palette;

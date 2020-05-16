@@ -18,6 +18,7 @@
       @include font("jumbo-header");
       a {
         font-size: 24pt;
+        margin: 0 1px;
       }
       .cl-a-primary {
         border-bottom: 14px solid rgba(color("primary"), 0.35);

@@ -76,6 +76,12 @@ $normalized-font-palette: (
     "weight": normal,
     "family": "jost",
   ),
+  "footer": (
+    "color": color("white"),
+    "size": 10pt,
+    "weight": normal,
+    "family": "ubuntu-mono",
+  ),
 );
 
 $font-palette: $normalized-font-palette;

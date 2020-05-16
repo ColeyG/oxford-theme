@@ -1,7 +1,21 @@
 .cl-primary-footer {
   width: 100%;
-  padding: spacing("gutter");
+  padding: spacing("footer");
   box-sizing: border-box;
   background-color: color("black");
   position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  p {
+    @include font("footer");
+  }
+  .right {
+    a {
+      @include font("footer");
+      background-color: darken(color("black"), 10%);
+    }
+  }
 }
