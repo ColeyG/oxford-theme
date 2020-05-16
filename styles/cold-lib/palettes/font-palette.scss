@@ -70,6 +70,12 @@ $normalized-font-palette: (
     "weight": normal,
     "family": "ubuntu-mono",
   ),
+  "jumbo-header": (
+    "color": color("black"),
+    "size": 24pt,
+    "weight": normal,
+    "family": "jost",
+  ),
 );
 
 $font-palette: $normalized-font-palette;
