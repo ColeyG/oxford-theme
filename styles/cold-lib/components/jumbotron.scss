@@ -6,16 +6,18 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  @include breakpoint("xsmall", $down: true) {
+    flex-direction: column;
+  }
   .content {
     padding: spacing("gutter");
     height: 100%;
     box-sizing: border-box;
-    max-width: 1000px;
+    max-width: 1200px;
     h2 {
       @include font("jumbo-header");
       a {
         font-size: 24pt;
-        margin: 0 5px;
       }
       .cl-a-primary {
         border-bottom: 14px solid rgba(color("primary"), 0.35);
@@ -25,6 +27,21 @@
       }
       .cl-a-tertiary {
         border-bottom: 14px solid rgba(color("tertiary"), 0.35);
+      }
+    }
+    @include breakpoint("small", $down: true) {
+      h2,
+      h2 a {
+        font-size: 12pt;
+        .cl-a-primary {
+          border-bottom: 5px solid rgba(color("primary"), 0.35);
+        }
+        .cl-a-secondary {
+          border-bottom: 5px solid rgba(color("secondary"), 0.35);
+        }
+        .cl-a-tertiary {
+          border-bottom: 5px solid rgba(color("tertiary"), 0.35);
+        }
       }
     }
   }
