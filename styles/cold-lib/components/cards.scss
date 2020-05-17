@@ -1,0 +1,42 @@
+@mixin cl-card-container() {
+  padding: spacing("gutter", "t");
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cl-card-container {
+  @include cl-card-container();
+}
+
+@mixin cl-card($scale: 300px) {
+  width: $scale / 1.2; // To maintain a weird but good aspect ratio
+  height: $scale / 2;
+  background-color: color("tertiary");
+  margin: spacing("gutter", "rb");
+  border-radius: 7px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  .cl-card-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .cl-card-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: spacing("gutter");
+    h4 {
+      color: color("white");
+    }
+  }
+}
+
+.cl-card {
+  @include cl-card();
+}

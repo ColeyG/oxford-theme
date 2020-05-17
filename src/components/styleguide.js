@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
+import CardContainer from './card-container';
+import Card from './card';
 
 class Styleguide extends React.Component {
   render() {
@@ -70,6 +72,10 @@ class Styleguide extends React.Component {
           </div>
           <div>
             <h2>Cards</h2>
+            <CardContainer>
+              <Card bgImage={require('../../assets/autumn.jpeg')} cardTitle="An Autumn Vale" />
+              <Card cardTitle="Searing Purple" />
+            </CardContainer>
           </div>
           <div>
             <h2>Footer</h2>
