@@ -8,7 +8,7 @@ class Footer extends React.Component {
           <p>Cole Geerts &copy; 2016 - 2020</p>
         </div>
         <div className="right">
-          <a href="#" className="cl-a-reverse">github</a>
+          <a href="https://github.com/ColeyG" target="_blank" rel="noopener noreferrer" className="cl-a-reverse">github</a>
         </div>
       </footer>
     );
