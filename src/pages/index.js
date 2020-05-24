@@ -15,7 +15,7 @@ export default () => <div className="cl-wrapper">
       <Card cardTitle="Secondary Featured Content" link="/article/sec" />
       <Card cardTitle="Tertiary Featured Content" link="/article/ter" />
     </CardContainer>
-    <CardContainer cardConTitle="Every Article">
+    <CardContainer cardConTitle="Recent Posts">
       <Card cardTitle="First Article" link="/article/pri" />
       <Card cardTitle="Second Article" link="/article/sec" />
       <Card cardTitle="Third Article" link="/article/ter" />
