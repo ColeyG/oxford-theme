@@ -1,7 +1,6 @@
 @mixin cl-jumbotron {
   width: 100%;
   margin-top: spacing("gutter");
-  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;

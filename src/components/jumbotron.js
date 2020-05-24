@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 class Jumbotron extends React.Component {
   render() {
     return (
-      <div className="cl-jumbotron">
+      <div className={`cl-jumbotron ${this.props.exClassName}`}>
         <div className="content">
           <h2>Hi! I'm Cole Geerts and I'm a Web Developer out of London Ontario. You can find some important links like those to my
             <a href="https://github.com/ColeyG" target="_blank" rel="noopener noreferrer" className="cl-a-primary">github</a>

@@ -23,3 +23,10 @@ body {
     }
   }
 }
+.index-jumbotron {
+  padding-bottom: spacing("gutter");
+  border-bottom: 2px solid color("black");
+}
+.index-section {
+  padding-top: spacing("gutter");
+}
