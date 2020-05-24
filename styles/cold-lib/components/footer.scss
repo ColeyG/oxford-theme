@@ -16,6 +16,7 @@
     a {
       @include font("footer");
       background-color: darken(color("black"), 10%);
+      margin-left: 5px;
     }
   }
 }
