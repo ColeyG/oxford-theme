@@ -12,7 +12,7 @@ class Jumbotron extends React.Component {
             <Link to="/resume" className="cl-a-secondary">web resume</Link> here.
              Otherwise if you've landed here from somewhere else you can check out my
             <Link to="/blog" className="cl-a-tertiary">blog</Link>
-              for tech notes on things I am particularly interested in.
+              for notes on things I am particularly interested in and assorted rants.
           </h2>
         </div>
         <div className="interactive">
