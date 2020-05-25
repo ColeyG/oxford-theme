@@ -3,10 +3,12 @@ import { Link } from 'gatsby';
 
 class Card extends React.Component {
   render() {
+    const bgColor = { backgroundColor: this.props.colorOverride };
+
     if (this.props.bgImage) {
       return (
         <Link to={this.props.link}>
-          <div className="cl-card">
+          <div className="cl-card" style={bgColor}>
             <img className="cl-card-image" src={this.props.bgImage} alt={this.props.cardTitle} />
             <div className="cl-card-body">
               <h4>{this.props.cardTitle}</h4>
@@ -17,7 +19,7 @@ class Card extends React.Component {
     }
     return (
       <Link to={this.props.link}>
-        <div className="cl-card">
+        <div className="cl-card" style={bgColor}>
           <div className="cl-card-body">
             <h4>{this.props.cardTitle}</h4>
           </div>

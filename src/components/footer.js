@@ -10,7 +10,7 @@ class Footer extends React.Component {
         </div>
         <div className="right">
           <Link to="/privacy" className="cl-a-reverse">privacy</Link>
-          <Link to="https://github.com/ColeyG" target="_blank" rel="noopener noreferrer" className="cl-a-reverse">github</Link>
+          <a href="https://github.com/ColeyG" target="_blank" rel="noopener noreferrer" className="cl-a-reverse">github</a>
         </div>
       </footer>
     );
