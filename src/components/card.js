@@ -7,24 +7,24 @@ class Card extends React.Component {
 
     if (this.props.bgImage) {
       return (
-        <Link to={this.props.link}>
-          <div className="cl-card" style={bgColor}>
-            <img className="cl-card-image" src={this.props.bgImage} alt={this.props.cardTitle} />
+        <div className="cl-card" style={bgColor}>
+          <img className="cl-card-image" src={this.props.bgImage} alt={this.props.cardTitle} />
+          <Link to={this.props.link}>
             <div className="cl-card-body">
               <h4>{this.props.cardTitle}</h4>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       );
     }
     return (
-      <Link to={this.props.link}>
-        <div className="cl-card" style={bgColor}>
+      <div className="cl-card" style={bgColor}>
+        <Link to={this.props.link}>
           <div className="cl-card-body">
             <h4>{this.props.cardTitle}</h4>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     );
   }
 }
