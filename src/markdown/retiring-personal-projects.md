@@ -1,6 +1,6 @@
 ---
 path: "/blog/retiring-personal-projects"
-date: "2020-05-24"
+date: "2020-05-30"
 title: "Retiring Personal Projects"
 type: "Opinion"
 ---
