@@ -16,7 +16,10 @@ class Jumbotron extends React.Component {
           </h2>
         </div>
         <div className="interactive">
-          <h2>asdf</h2>
+          <div className="image">
+            <img src={require('../../assets/portrait.jpeg')} alt="" />
+          </div>
+          <Link to="/contact" className='cl-a-reverse'>Get In Touch</Link>
         </div>
       </div>
     );

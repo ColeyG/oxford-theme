@@ -3,7 +3,12 @@ import { Link } from 'gatsby';
 
 class Card extends React.Component {
   render() {
-    const bgColor = { backgroundColor: this.props.colorOverride };
+    let bgColor;
+    if (this.props.colorOverride) {
+      bgColor = { backgroundColor: this.props.colorOverride };
+    } else {
+      console.log('asdf');
+    }
 
     if (this.props.bgImage) {
       return (
