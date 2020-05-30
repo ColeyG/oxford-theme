@@ -37,7 +37,7 @@ export default ({ data }) => {
   edges.forEach((edge, index) => {
     const { node } = edge;
     const { frontmatter } = node;
-    console.log(frontmatter);
+
     if (frontmatter.image) {
       recentPosts.push(<Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} />);
     } else {

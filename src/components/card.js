@@ -6,8 +6,6 @@ class Card extends React.Component {
     let bgColor;
     if (this.props.colorOverride) {
       bgColor = { backgroundColor: this.props.colorOverride };
-    } else {
-      console.log('asdf');
     }
 
     if (this.props.bgImage) {
