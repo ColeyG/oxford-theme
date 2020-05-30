@@ -1,0 +1,56 @@
+import React from 'react';
+import { graphql } from 'gatsby';
+import Header from '../components/header';
+import CardContainer from '../components/card-container';
+import Card from '../components/card';
+import Footer from '../components/footer';
+
+export default ({ data }) => {
+  const { allMarkdownRemark } = data;
+  const { edges } = allMarkdownRemark;
+  const blogPosts = [];
+
+  edges.forEach((edge, index) => {
+    const { node } = edge;
+    const { frontmatter } = node;
+
+    if (frontmatter.image) {
+      blogPosts.push(<Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} />);
+    } else {
+      blogPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} />);
+    }
+  });
+
+  return (
+    <div className="cl-wrapper">
+      <div className="cl-page">
+        <Header mainTitle="Cole Geerts" />
+        <div className="blog">
+          <CardContainer cardConTitle="All Blog Posts in Order">
+            {blogPosts}
+          </CardContainer>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export const pageQuery = graphql`
+{
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] }
+    limit: 1000
+  ) {
+    edges {
+      node {
+        frontmatter {
+          path
+          title
+          image
+        }
+      }
+    }
+  }
+}
+`;

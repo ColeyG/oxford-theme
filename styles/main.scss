@@ -30,3 +30,9 @@ body {
 .index-section {
   padding-top: spacing("gutter");
 }
+.blog {
+  margin-top: spacing("gutter");
+  .cl-card-con-title h3 {
+    font-style: italic;
+  }
+}

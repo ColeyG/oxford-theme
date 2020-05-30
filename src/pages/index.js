@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Header from '../components/header';
 import Jumbotron from '../components/jumbotron';
 import CardContainer from '../components/card-container';
