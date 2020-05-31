@@ -11,10 +11,6 @@ Inspired by print and print media, the _Oxford Theme_ is a static site with a cu
 - `npm run dev` spins up a gatsby dev server
 - `npm run prod` create a set of static pages!
 
-## License
-
-All rights are reserved to their respective creators. You can license a copy of this theme my mailing the creators
-
 ## Project Tracking
 
 Project assets are hosted [here](https://drive.google.com/drive/folders/12V9GKE85i06aBOf5SLbEkPRbQmqnlRHn?usp=sharing)
