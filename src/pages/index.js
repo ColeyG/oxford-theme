@@ -25,9 +25,9 @@ export default ({ data }) => {
         // IMPROVE: This silently fails if no featured content is found and displays the string. Maybe
         // remove the string and log an error if that happens?
         if (frontmatter.image) {
-          featuredContent[index] = <Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} />;
+          featuredContent[index] = <Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />;
         } else {
-          featuredContent[index] = <Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} />;
+          featuredContent[index] = <Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />;
         }
       }
     });
@@ -39,9 +39,9 @@ export default ({ data }) => {
     const { frontmatter } = node;
 
     if (frontmatter.image) {
-      recentPosts.push(<Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} />);
+      recentPosts.push(<Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
     } else {
-      recentPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} />);
+      recentPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
     }
   });
 
@@ -74,6 +74,7 @@ export const pageQuery = graphql`
           path
           title
           image
+          type
         }
       }
     }

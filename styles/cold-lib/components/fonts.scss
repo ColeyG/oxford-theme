@@ -38,6 +38,10 @@ h6 {
   @include font-highlight();
 }
 
+a {
+  @include font-highlight();
+}
+
 p {
   @include font("body");
   @include font-highlight();

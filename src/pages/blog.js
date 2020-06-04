@@ -15,9 +15,9 @@ export default ({ data }) => {
     const { frontmatter } = node;
 
     if (frontmatter.image) {
-      blogPosts.push(<Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} />);
+      blogPosts.push(<Card key={index} bgImage={require(`../../assets/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
     } else {
-      blogPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} />);
+      blogPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
     }
   });
 
@@ -48,6 +48,7 @@ export const pageQuery = graphql`
           path
           title
           image
+          type
         }
       }
     }
