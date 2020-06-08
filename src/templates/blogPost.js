@@ -13,7 +13,7 @@ export default function Template({ data }) {
           <Header mainTitle="Cole Geerts" />
           <div className="cl-article">
             <h2>{frontmatter.title}</h2>
-            <img src={require(`../../assets/${frontmatter.image}`)} alt={frontmatter.imageAlt} />
+            <img src={require(`../../assets/optimized/${frontmatter.image}`)} alt={frontmatter.imageAlt} />
             <div
               className="blog-post-content"
               dangerouslySetInnerHTML={{ __html: html }}

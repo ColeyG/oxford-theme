@@ -16,7 +16,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,500;1,500&family=Noto+Sans+SC&family=Ubuntu+Mono&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Jost&family=Noto+Sans:ital,wght@0,700;1,400&family=Ubuntu+Mono&display=swap" rel="stylesheet"></link>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

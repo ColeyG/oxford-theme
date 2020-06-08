@@ -73,7 +73,7 @@ class Styleguide extends React.Component {
           <div>
             <h2>Cards</h2>
             <CardContainer>
-              <Card bgImage={require('../../assets/autumn.jpeg')} cardTitle="An Autumn Vale" />
+              <Card bgImage={require('../../assets/optimized/autumn.jpeg')} cardTitle="An Autumn Vale" />
               <Card cardTitle="Searing Purple" />
             </CardContainer>
           </div>
