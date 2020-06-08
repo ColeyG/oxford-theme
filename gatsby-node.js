@@ -37,7 +37,10 @@ exports.createPages = async ({ graphql, actions }) => {
       edges {
         node {
           frontmatter {
+            title
+            image
             path
+            type
           }
         }
       }
@@ -46,10 +49,25 @@ exports.createPages = async ({ graphql, actions }) => {
 `);
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const relatedArticles = [];
+
+    result.data.allMarkdownRemark.edges.forEach((page) => {
+      if (page.node.frontmatter.type === node.frontmatter.type && page.node.frontmatter.title !== node.frontmatter.title) {
+        relatedArticles.push({
+          title: node.frontmatter.title,
+          path: node.frontmatter.path,
+          image: node.frontmatter.image,
+          type: node.frontmatter.type,
+        });
+      }
+    });
+
     actions.createPage({
       path: node.frontmatter.path,
       component: require.resolve('./src/templates/blogPost.js'),
-      context: {}, // additional data can be passed via context
+      context: {
+        related: relatedArticles,
+      }, // additional data can be passed via context
     });
   });
 };

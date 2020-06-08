@@ -3,7 +3,7 @@
   padding: spacing("gutter");
   p {
     margin-top: spacing("gutter");
-    text-indent: spacing("gutter");
+    text-indent: spacing("gutter") / 2;
   }
   a {
     text-indent: 0;
@@ -12,5 +12,10 @@
     max-width: 100%;
     box-shadow: 0 2px 3px rgba(color("black"), 0.25);
     margin-top: spacing("gutter");
+  }
+  .cl-date {
+    text-indent: 5px;
+    font-style: italic;
+    margin-top: 5px;
   }
 }

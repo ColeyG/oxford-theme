@@ -18,6 +18,7 @@
   "rules": {
     // Turning this off for render methods
     "class-methods-use-this": "off",
+    "prefer-const": "off", // While I think we should actually use const, the "lets" get transformed far too often on save
     "import/extensions": "off",
     "no-console": "off",
     "no-plusplus": "off",

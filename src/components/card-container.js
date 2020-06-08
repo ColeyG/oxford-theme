@@ -1,6 +1,7 @@
 import React from 'react';
 
 class CardContainer extends React.Component {
+  // TODO: Do optional rendering the other way
   render() {
     if (this.props.cardConTitle) {
       return (

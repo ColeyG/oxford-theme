@@ -64,3 +64,23 @@
 .cl-card {
   @include cl-card();
 }
+
+@mixin cl-related-posts-con() {
+  padding: spacing("gutter", "t");
+}
+
+@mixin cl-related-posts() {
+  padding: spacing("gutter", "t");
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cl-related-posts-con {
+  @include cl-related-posts-con();
+}
+
+.cl-related-posts {
+  @include cl-related-posts();
+}

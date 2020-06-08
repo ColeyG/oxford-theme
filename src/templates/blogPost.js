@@ -1,39 +1,42 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Header from '../components/header';
+import RelatedPost from '../components/related-posts';
 import Footer from '../components/footer';
 
-export default function Template({ data }) {
+export default function Template({ data, pageContext }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+  let imageArea = null;
+  let date = null;
+  let related = null;
+
   if (frontmatter.image) {
-    return (
-      <div className="cl-wrapper">
-        <div className="cl-page">
-          <Header mainTitle="Cole Geerts" />
-          <div className="cl-article">
-            <h2>{frontmatter.title}</h2>
-            <img src={require(`../../assets/optimized/${frontmatter.image}`)} alt={frontmatter.imageAlt} />
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
+    imageArea = <img src={require(`../../assets/optimized/${frontmatter.image}`)} alt={frontmatter.imageAlt} />;
   }
+
+  if (frontmatter.date) {
+    date = <p className="cl-date">{frontmatter.date}</p>;
+  }
+
+  if (frontmatter.type && pageContext.related) {
+    const cards = 'asdf';
+    related = <RelatedPost type={frontmatter.type}>{cards}</RelatedPost>;
+  }
+
   return (
     <div className="cl-wrapper">
       <div className="cl-page">
         <Header mainTitle="Cole Geerts" />
         <div className="cl-article">
           <h2>{frontmatter.title}</h2>
+          {date}
+          {imageArea}
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          {related}
         </div>
       </div>
       <Footer />
@@ -50,6 +53,7 @@ export const pageQuery = graphql`
         path
         title
         image
+        type
       }
     }
   }
