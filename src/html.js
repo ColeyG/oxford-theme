@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html {...props.htmlAttributes} lang="en">
       <head>
         <title>
           Cole Geerts
@@ -15,6 +15,7 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="description" content="Cole Geerts' Works and Blog. Cole is a web developer looking for work in the London Ontario area." />
         {props.headComponents}
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Noto+Sans:ital,wght@0,700;1,400&family=Ubuntu+Mono&display=swap" rel="stylesheet"></link>
       </head>
