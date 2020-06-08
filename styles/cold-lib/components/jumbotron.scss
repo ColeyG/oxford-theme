@@ -15,8 +15,9 @@
     max-width: 1200px;
     h2 {
       @include font("jumbo-header");
+      line-height: 28px;
       a {
-        font-size: 24pt;
+        font-size: 20pt;
         margin: 0 1px;
       }
       .cl-a-primary {
