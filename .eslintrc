@@ -33,7 +33,7 @@
     "import/no-extraneous-dependencies": "off",
     "max-len": [
       "error",
-      200
+      250
     ],
     "indent": [
       "error",
