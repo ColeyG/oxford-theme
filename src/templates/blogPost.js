@@ -12,16 +12,16 @@ export default function Template({ data, pageContext }) {
   let related = null;
 
   if (frontmatter.image) {
-    imageArea = <img src={require(`../../assets/optimized/${frontmatter.image}`)} alt={frontmatter.imageAlt} />;
+    imageArea = <img className="cl-article-image" src={require(`../../assets/optimized/${frontmatter.image}`)} alt={frontmatter.imageAlt} />;
   }
 
   if (frontmatter.date) {
     date = <p className="cl-date">{frontmatter.date}</p>;
   }
 
-  if (frontmatter.type && pageContext.related) {
-    const cards = 'asdf';
-    related = <RelatedPost type={frontmatter.type}>{cards}</RelatedPost>;
+  if (frontmatter.type && pageContext.related.length) {
+    related = <RelatedPost type={frontmatter.type} related={pageContext.related} />;
+    console.log(pageContext.related);
   }
 
   return (
@@ -36,8 +36,8 @@ export default function Template({ data, pageContext }) {
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          {related}
         </div>
+        {related}
       </div>
       <Footer />
     </div>

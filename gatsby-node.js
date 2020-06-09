@@ -47,18 +47,22 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   }
 `);
-
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const { edges } = result.data.allMarkdownRemark;
+  edges.forEach(({ node }) => {
     const relatedArticles = [];
 
-    result.data.allMarkdownRemark.edges.forEach((page) => {
-      if (page.node.frontmatter.type === node.frontmatter.type && page.node.frontmatter.title !== node.frontmatter.title) {
-        relatedArticles.push({
-          title: node.frontmatter.title,
-          path: node.frontmatter.path,
-          image: node.frontmatter.image,
-          type: node.frontmatter.type,
-        });
+    // Checking for related articles
+    edges.forEach((edge) => {
+      if (node.frontmatter.type === edge.node.frontmatter.type && node.frontmatter.title !== edge.node.frontmatter.title) {
+        console.log(node.frontmatter.type);
+        relatedArticles.push(
+          {
+            title: edge.node.frontmatter.title,
+            path: edge.node.frontmatter.path,
+            image: edge.node.frontmatter.image,
+            type: edge.node.frontmatter.type,
+          },
+        );
       }
     });
 

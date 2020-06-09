@@ -1,14 +1,16 @@
 .cl-article {
   max-width: 1200px;
   padding: spacing("gutter");
-  p {
-    margin-top: spacing("gutter");
-    text-indent: spacing("gutter") / 2;
+  .blog-post-content {
+    p {
+      margin-top: spacing("gutter");
+      text-indent: spacing("gutter") / 2;
+    }
+    a {
+      text-indent: 0;
+    }
   }
-  a {
-    text-indent: 0;
-  }
-  img {
+  .cl-article-image {
     max-width: 100%;
     box-shadow: 0 2px 3px rgba(color("black"), 0.25);
     margin-top: spacing("gutter");
