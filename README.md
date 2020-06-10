@@ -2,8 +2,6 @@
 
 Inspired by print and print media, the _Oxford Theme_ is a static site with a customisable plugin cms base built with React & Gatsby.
 
-## Screenshots
-
 ![Oxford Theme Example Image](https://github.com/ColeyG/oxford-theme/blob/master/assets/screenshot.png?raw=true)
 
 ## Commands
