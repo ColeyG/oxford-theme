@@ -5,7 +5,6 @@ import Jumbotron from '../components/jumbotron';
 import CardContainer from '../components/card-container';
 import Card from '../components/card';
 import Footer from '../components/footer';
-import '../../styles/main.scss';
 
 export default ({ data }) => {
   const { allMarkdownRemark } = data;
