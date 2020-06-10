@@ -4,6 +4,7 @@ import Card from './card';
 export default function RelatedPosts(props) {
   const cards = [];
 
+  // FIXME: Card Mess
   props.related.forEach((relatedPost, index) => {
     if (relatedPost.image) {
       cards.push(<Card key={index} bgImage={require(`../../assets/optimized/${relatedPost.image}`)} cardTitle={relatedPost.title} link={relatedPost.path} type={relatedPost.type} />);

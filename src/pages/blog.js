@@ -14,6 +14,7 @@ export default ({ data }) => {
     const { node } = edge;
     const { frontmatter } = node;
 
+    // FIXME: Card Mess
     if (frontmatter.image) {
       blogPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
     } else if (frontmatter.backupImage) {

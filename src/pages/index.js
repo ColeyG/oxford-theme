@@ -21,6 +21,8 @@ export default ({ data }) => {
     edges.forEach((edge) => {
       const { node } = edge;
       const { frontmatter } = node;
+
+      // FIXME: Card Mess
       if (frontmatter.title === pageTitle) {
         if (frontmatter.image) {
           featuredContentPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
@@ -49,6 +51,7 @@ export default ({ data }) => {
     const { node } = edge;
     const { frontmatter } = node;
 
+    // FIXME: Card Mess
     if (frontmatter.image) {
       recentPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
     } else if (frontmatter.backupImage) {
