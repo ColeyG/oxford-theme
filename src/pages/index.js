@@ -24,13 +24,13 @@ export default ({ data }) => {
       if (frontmatter.title === pageTitle) {
         if (frontmatter.image) {
           featuredContentPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-          // featuredContent.splice(index);
+          featuredContent.splice(index);
         } else if (frontmatter.backupImage) {
           featuredContentPosts.push(<Card key={index} backupImage={require(`../../assets/optimized/${frontmatter.backupImage}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-          // featuredContent.splice(index);
+          featuredContent.splice(index);
         } else {
           featuredContentPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-          // featuredContent.splice(index);
+          featuredContent.splice(index);
         }
       }
     });
