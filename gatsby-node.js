@@ -54,7 +54,6 @@ exports.createPages = async ({ graphql, actions }) => {
     // Checking for related articles
     edges.forEach((edge) => {
       if (node.frontmatter.type === edge.node.frontmatter.type && node.frontmatter.title !== edge.node.frontmatter.title) {
-        console.log(node.frontmatter.type);
         relatedArticles.push(
           {
             title: edge.node.frontmatter.title,
