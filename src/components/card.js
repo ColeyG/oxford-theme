@@ -5,6 +5,7 @@ class Card extends React.Component {
   render() {
     let bgColor;
     let type;
+    let image;
 
     if (this.props.colorOverride) {
       bgColor = { backgroundColor: this.props.colorOverride };
@@ -15,20 +16,12 @@ class Card extends React.Component {
     }
 
     if (this.props.bgImage) {
-      return (
-        <div className="cl-card" style={bgColor}>
-          <img className="cl-card-image" src={this.props.bgImage} alt={this.props.cardTitle} />
-          <Link to={this.props.link}>
-            <div className="cl-card-body">
-              <h4>{this.props.cardTitle}</h4>
-              {type}
-            </div>
-          </Link>
-        </div >
-      );
+      image = <img className="cl-card-image" src={this.props.bgImage} alt={this.props.cardTitle} />;
     }
+
     return (
       <div className="cl-card" style={bgColor} >
+        {image}
         <Link to={this.props.link}>
           <div className="cl-card-body">
             <h4>{this.props.cardTitle}</h4>
