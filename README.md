@@ -4,7 +4,7 @@ Inspired by print and print media, the _Oxford Theme_ is a static site with a cu
 
 ## Screenshots
 
-// TODO: add screenshots
+![Oxford Theme Example Image](https://github.com/ColeyG/oxford-theme/blob/master/assets/screenshot.png?raw=true)
 
 ## Commands
 

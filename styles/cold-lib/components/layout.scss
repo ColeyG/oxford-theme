@@ -1,0 +1,22 @@
+@mixin cl-wrapper() {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin cl-page() {
+  width: 100%;
+  flex-grow: 999999;
+  padding: spacing("gutter");
+  box-sizing: border-box;
+}
+
+.cl-wrapper {
+  @include cl-wrapper();
+}
+
+.cl-page {
+  @include cl-page();
+}
