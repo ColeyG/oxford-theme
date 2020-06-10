@@ -12,7 +12,8 @@ export default ({ data }) => {
 
   const featuredContent = [
     'Gatsby & React', // TODO: Load featured content from a config
-  ]; // Kind of a faux pas but I mutate this array later to contain cards of the featured content
+  ];
+  const featuredContentPosts = [];
   const recentPosts = [];
 
   // Prepping Featured content based on the array above
@@ -21,16 +22,27 @@ export default ({ data }) => {
       const { node } = edge;
       const { frontmatter } = node;
       if (frontmatter.title === pageTitle) {
-        // IMPROVE: This silently fails if no featured content is found and displays the string. Maybe
-        // remove the string and log an error if that happens?
         if (frontmatter.image) {
-          featuredContent[index] = <Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />;
+          featuredContentPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+          // featuredContent.splice(index);
+        } else if (frontmatter.backupImage) {
+          featuredContentPosts.push(<Card key={index} backupImage={require(`../../assets/optimized/${frontmatter.backupImage}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+          // featuredContent.splice(index);
         } else {
-          featuredContent[index] = <Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />;
+          featuredContentPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+          // featuredContent.splice(index);
         }
       }
     });
   });
+
+  if (featuredContent.length > 0) {
+    let errs = '';
+    featuredContent.forEach((missingPost) => {
+      errs += ` ${missingPost}`;
+    });
+    console.error(`Missing featured content: ${errs}`);
+  }
 
   // Prepping All posts content
   edges.forEach((edge, index) => {
@@ -52,6 +64,7 @@ export default ({ data }) => {
         <Header mainTitle="Cole Geerts" />
         <Jumbotron exClassName="index-jumbotron" />
         <CardContainer exClassName="index-section" cardConTitle="Featured Content">
+          {featuredContentPosts}
           {featuredContent}
         </CardContainer>
         <CardContainer cardConTitle="Recent Posts">
