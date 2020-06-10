@@ -21,7 +21,6 @@ export default function Template({ data, pageContext }) {
 
   if (frontmatter.type && pageContext.related.length) {
     related = <RelatedPost type={frontmatter.type} related={pageContext.related} />;
-    console.log(pageContext.related);
   }
 
   return (

@@ -73,9 +73,9 @@ class Styleguide extends React.Component {
           <div>
             <h2>Cards</h2>
             <CardContainer>
-              { /* FIXME: Card Mess */}
-              <Card bgImage={require('../../assets/optimized/autumn.jpeg')} cardTitle="An Autumn Vale" />
-              <Card cardTitle="Searing Purple" />
+              <Card bgImage={'autumn.jpeg'} cardTitle="With Background Image" />
+              <Card backupImage={'autumn.jpeg'} cardTitle="With Backup Image" />
+              <Card cardTitle="No Image" />
             </CardContainer>
           </div>
           <div>

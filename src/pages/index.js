@@ -22,18 +22,9 @@ export default ({ data }) => {
       const { node } = edge;
       const { frontmatter } = node;
 
-      // FIXME: Card Mess
       if (frontmatter.title === pageTitle) {
-        if (frontmatter.image) {
-          featuredContentPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-          featuredContent.splice(index);
-        } else if (frontmatter.backupImage) {
-          featuredContentPosts.push(<Card key={index} backupImage={require(`../../assets/optimized/${frontmatter.backupImage}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-          featuredContent.splice(index);
-        } else {
-          featuredContentPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-          featuredContent.splice(index);
-        }
+        featuredContentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+        featuredContent.splice(index);
       }
     });
   });
@@ -51,14 +42,7 @@ export default ({ data }) => {
     const { node } = edge;
     const { frontmatter } = node;
 
-    // FIXME: Card Mess
-    if (frontmatter.image) {
-      recentPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-    } else if (frontmatter.backupImage) {
-      recentPosts.push(<Card key={index} backupImage={require(`../../assets/optimized/${frontmatter.backupImage}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-    } else {
-      recentPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-    }
+    recentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
   });
 
   return (

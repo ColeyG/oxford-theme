@@ -55,25 +55,15 @@ exports.createPages = async ({ graphql, actions }) => {
     // Checking for related articles
     edges.forEach((edge) => {
       if (node.frontmatter.type === edge.node.frontmatter.type && node.frontmatter.title !== edge.node.frontmatter.title) {
-        if (edge.node.frontmatter.image) {
-          relatedArticles.push(
-            {
-              title: edge.node.frontmatter.title,
-              path: edge.node.frontmatter.path,
-              image: edge.node.frontmatter.image,
-              type: edge.node.frontmatter.type,
-            },
-          );
-        } else if (edge.node.frontmatter.backupImage) {
-          relatedArticles.push(
-            {
-              title: edge.node.frontmatter.title,
-              path: edge.node.frontmatter.path,
-              backupImage: edge.node.frontmatter.backupImage,
-              type: edge.node.frontmatter.type,
-            },
-          );
-        }
+        relatedArticles.push(
+          {
+            title: edge.node.frontmatter.title,
+            path: edge.node.frontmatter.path,
+            image: edge.node.frontmatter.image,
+            type: edge.node.frontmatter.type,
+            backupImage: edge.node.frontmatter.backupImage,
+          },
+        );
       }
     });
 

@@ -14,14 +14,7 @@ export default ({ data }) => {
     const { node } = edge;
     const { frontmatter } = node;
 
-    // FIXME: Card Mess
-    if (frontmatter.image) {
-      blogPosts.push(<Card key={index} bgImage={require(`../../assets/optimized/${frontmatter.image}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-    } else if (frontmatter.backupImage) {
-      blogPosts.push(<Card key={index} backupImage={require(`../../assets/optimized/${frontmatter.backupImage}`)} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-    } else {
-      blogPosts.push(<Card key={index} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-    }
+    blogPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
   });
 
   return (
