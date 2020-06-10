@@ -3,6 +3,8 @@ path: "/blog/retiring-personal-projects"
 date: "2020-05-30"
 title: "Retiring Personal Projects"
 type: "Opinion"
+backupImage: "autumn.jpeg"
+backupImageAlt: "Autumn Day"
 ---
 I am in a number of technical discord and forum channels. In most you'll see users self-promoting, talking about the projects that they are developing their skills with. Today I saw something a little bit different.
 

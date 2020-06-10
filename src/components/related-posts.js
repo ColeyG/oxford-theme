@@ -7,6 +7,8 @@ export default function RelatedPosts(props) {
   props.related.forEach((relatedPost, index) => {
     if (relatedPost.image) {
       cards.push(<Card key={index} bgImage={require(`../../assets/optimized/${relatedPost.image}`)} cardTitle={relatedPost.title} link={relatedPost.path} type={relatedPost.type} />);
+    } else if (relatedPost.backupImage) {
+      cards.push(<Card key={index} backupImage={require(`../../assets/optimized/${relatedPost.backupImage}`)} cardTitle={relatedPost.title} link={relatedPost.path} type={relatedPost.type} />);
     } else {
       cards.push(<Card key={index} cardTitle={relatedPost.title} link={relatedPost.path} type={relatedPost.type} />);
     }

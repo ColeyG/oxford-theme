@@ -41,6 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
             image
             path
             type
+            backupImage
           }
         }
       }
@@ -54,14 +55,25 @@ exports.createPages = async ({ graphql, actions }) => {
     // Checking for related articles
     edges.forEach((edge) => {
       if (node.frontmatter.type === edge.node.frontmatter.type && node.frontmatter.title !== edge.node.frontmatter.title) {
-        relatedArticles.push(
-          {
-            title: edge.node.frontmatter.title,
-            path: edge.node.frontmatter.path,
-            image: edge.node.frontmatter.image,
-            type: edge.node.frontmatter.type,
-          },
-        );
+        if (edge.node.frontmatter.image) {
+          relatedArticles.push(
+            {
+              title: edge.node.frontmatter.title,
+              path: edge.node.frontmatter.path,
+              image: edge.node.frontmatter.image,
+              type: edge.node.frontmatter.type,
+            },
+          );
+        } else if (edge.node.frontmatter.backupImage) {
+          relatedArticles.push(
+            {
+              title: edge.node.frontmatter.title,
+              path: edge.node.frontmatter.path,
+              backupImage: edge.node.frontmatter.backupImage,
+              type: edge.node.frontmatter.type,
+            },
+          );
+        }
       }
     });
 
