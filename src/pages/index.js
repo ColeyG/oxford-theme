@@ -18,7 +18,6 @@ export default ({ data }) => {
   const recentPosts = [];
 
   // Prepping Featured content based on the array above
-  console.log(featuredContent);
   featuredContent.forEach((pageTitle, index) => {
     edges.forEach((edge) => {
       const { node } = edge;
