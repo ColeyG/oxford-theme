@@ -11,12 +11,14 @@ export default ({ data }) => {
   const { edges } = allMarkdownRemark;
 
   const featuredContent = [
-    'Gatsby & React', // TODO: Load featured content from a config
+    'Gameboy Advance Demo', // TODO: Load featured content from a config
+    'Gatsby & React',
   ];
   const featuredContentPosts = [];
   const recentPosts = [];
 
   // Prepping Featured content based on the array above
+  console.log(featuredContent);
   featuredContent.forEach((pageTitle, index) => {
     edges.forEach((edge) => {
       const { node } = edge;
@@ -24,18 +26,9 @@ export default ({ data }) => {
 
       if (frontmatter.title === pageTitle) {
         featuredContentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-        featuredContent.splice(index);
       }
     });
   });
-
-  if (featuredContent.length > 0) {
-    let errs = '';
-    featuredContent.forEach((missingPost) => {
-      errs += ` ${missingPost}`;
-    });
-    console.error(`Missing featured content: ${errs}`);
-  }
 
   // Prepping All posts content
   edges.forEach((edge, index) => {
@@ -52,7 +45,6 @@ export default ({ data }) => {
         <Jumbotron exClassName="index-jumbotron" />
         <CardContainer exClassName="index-section" cardConTitle="Featured Content">
           {featuredContentPosts}
-          {featuredContent}
         </CardContainer>
         <CardContainer cardConTitle="Recent Posts">
           {recentPosts}
