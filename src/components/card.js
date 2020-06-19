@@ -16,9 +16,9 @@ class Card extends React.Component {
     }
 
     if (this.props.bgImage) {
-      image = <img className="cl-card-image" src={require(`../../assets/optimized/${this.props.bgImage}`)} alt={this.props.cardTitle} />;
+      image = <img className="cl-card-image" src={require(`../../assets/${this.props.bgImage}`)} alt={this.props.cardTitle} />;
     } else if (this.props.backupImage) {
-      image = <img className="cl-card-image cl-card-image-backup" src={require(`../../assets/optimized/${this.props.backupImage}`)} alt={this.props.cardTitle} />;
+      image = <img className="cl-card-image cl-card-image-backup" src={require(`../../assets/${this.props.backupImage}`)} alt={this.props.cardTitle} />;
     }
 
     return (

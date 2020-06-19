@@ -12,7 +12,7 @@ export default function Template({ data, pageContext }) {
   let related = null;
 
   if (frontmatter.image) {
-    imageArea = <img className="cl-article-image" src={require(`../../assets/optimized/${frontmatter.image}`)} alt={frontmatter.imageAlt} />;
+    imageArea = <img className="cl-article-image" src={require(`../../assets/${frontmatter.image}`)} alt={frontmatter.imageAlt} />;
   }
 
   if (frontmatter.date) {

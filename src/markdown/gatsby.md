@@ -3,7 +3,7 @@ path: "/blog/gatsby-and-react"
 date: "2020-05-24"
 title: "Gatsby & React"
 type: "Tech"
-image: "react-and-gatsby.jpg"
+image: "optimized/react-and-gatsby.jpg"
 imageAlt: "Gatsby and React Logos"
 ---
 So recently I've undertaken the redesign of my personal site (this one right here!). Over the course of doing so I decided to choose a new stack to build it on, and since every site so far has been PHP + MySQL hardcoded, so I wanted to do something JS focused. Since the framework has a large amount of buzz, I went with [Gatsby](https://www.gatsbyjs.org/).
