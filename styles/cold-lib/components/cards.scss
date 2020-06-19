@@ -1,3 +1,12 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @mixin cl-card-container() {
   padding: spacing("gutter", "t");
   display: flex;
@@ -11,13 +20,14 @@
 }
 
 @mixin cl-card($scale: 300px) {
+  animation: fadein 0.5s;
   width: $scale / 1.2; // To maintain a weird but good aspect ratio
   height: $scale / 2;
   &:nth-last-child(even) {
-    background-color: color("primary");
+    background-color: rgba(color("primary"), 0.5);
   }
   &:nth-last-child(odd) {
-    background-color: color("secondary");
+    background-color: rgba(color("secondary"), 0.5);
   }
   margin: spacing("gutter", "rb");
   border-radius: 7px;

@@ -1,6 +1,6 @@
 .cl-article {
   max-width: 1200px;
-  padding: spacing("gutter");
+  padding: spacing("article", "trl");
   .blog-post-content {
     p {
       margin-top: spacing("gutter");
