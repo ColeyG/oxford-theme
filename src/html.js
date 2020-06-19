@@ -21,6 +21,7 @@ export default function HTML(props) {
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
+        <canvas className="header-canvas"></canvas>
         <div
           key={'body'}
           id="___gatsby"
