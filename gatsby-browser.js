@@ -6,15 +6,11 @@ const c = canvas.getContext('2d');
 let starArray = [];
 let amountOfStars = 10;
 
-for (let i; amountOfStars <= i; i++) {
-  // TODO: Assoc Array here. Currently x, y, radius
-  starArray.push([10, 10, 50]);
-}
 
 const starRender = (star) => {
   c.beginPath();
   c.arc(star[0], star[1], star[2], 0, 2 * Math.PI, false);
-  c.fillStyle = 'green';
+  c.fillStyle = 'black';
   c.fill();
 };
 
@@ -28,4 +24,17 @@ const animateLoop = () => {
   });
 };
 
-animateLoop();
+const initializeAnimation = () => {
+  setTimeout(() => {
+    canvas.width = window.innerWidth;
+    canvas.height = canvas.offsetHeight;
+
+    for (let i = 0; amountOfStars > i; i++) {
+      starArray.push([Math.random() * canvas.width, Math.random() * canvas.height, 3]);
+    }
+
+    animateLoop();
+  }, 1000);
+};
+
+// initializeAnimation();
