@@ -2,6 +2,15 @@
   max-width: 1200px;
   padding: spacing("article", "trl");
   .blog-post-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: spacing("gutter");
+      text-indent: spacing("gutter");
+    }
     p {
       margin-top: spacing("gutter");
       text-indent: spacing("gutter") / 2;
@@ -9,6 +18,11 @@
     a {
       text-indent: 0;
     }
+  }
+  code {
+    background-color: color("black");
+    color: color("white");
+    padding: 0 4px;
   }
   .cl-article-image {
     max-width: 100%;

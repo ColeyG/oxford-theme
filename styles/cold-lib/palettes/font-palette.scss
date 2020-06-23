@@ -82,6 +82,12 @@ $normalized-font-palette: (
     "weight": normal,
     "family": "ubuntu-mono",
   ),
+  "code": (
+    "color": color("black"),
+    "size": 12pt,
+    "weight": normal,
+    "family": "ubuntu-mono",
+  ),
 );
 
 $font-palette: $normalized-font-palette;

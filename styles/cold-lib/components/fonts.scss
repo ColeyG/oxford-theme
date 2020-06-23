@@ -58,6 +58,11 @@ p {
   }
 }
 
+code {
+  @include font("code");
+  @include font-highlight();
+}
+
 .cl-a-primary,
 .cl-a-secondary,
 .cl-a-tertiary {
