@@ -20,4 +20,4 @@ So, today I retire [ganymede](https://github.com/ColeyG/ganymede). Over the last
 
 Who knows, maybe if the build system for C++ improves or my skill to handle the quirks of CMake improves, I'll revisit the project. But for know, Windows compilation and dependency management sucks with C++, and introduces too much unneeded complexity to game creation.
 
-_I also plan on using [this course](https://www.youtube.com/watch?v=UM5nuVkDfLg) to learn Godot. Perhaps I'll review it afterwards._
+_I also plan on using [this course](https://www.youtube.com/watch?v=UM5nuVkDfLg) to learn Godot. Perhaps I'll review the learning afterwards._
