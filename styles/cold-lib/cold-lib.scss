@@ -37,6 +37,9 @@
 @import "./cold-lib/components/article.scss";
 @import "./cold-lib/components/layout.scss";
 
+// Page Imports: Full Pages applied to only a specific page
+@import "./cold-lib/pages/contact.scss";
+
 @mixin center-article() {
   display: flex;
   justify-content: center;

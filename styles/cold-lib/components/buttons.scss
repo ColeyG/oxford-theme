@@ -1,7 +1,7 @@
 @mixin button($color: color("primary")) {
   @include button-normalize();
   @include font("button");
-  border-radius: 150px;
+  border-radius: 7px;
   padding: 10px 25px;
   background-color: $color;
   transition: 0.2s;

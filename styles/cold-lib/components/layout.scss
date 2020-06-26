@@ -13,10 +13,21 @@
   box-sizing: border-box;
 }
 
+@mixin cl-page-content() {
+  padding-top: spacing("gutter") / 2;
+  @include breakpoint("xsmall") {
+    padding-top: spacing("gutter");
+  }
+}
+
 .cl-wrapper {
   @include cl-wrapper();
 }
 
 .cl-page {
   @include cl-page();
+}
+
+.cl-page-content {
+  @include cl-page-content();
 }

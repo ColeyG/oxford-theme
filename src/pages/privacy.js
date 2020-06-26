@@ -5,7 +5,7 @@ import Footer from '../components/footer';
 export default () => (<div className="cl-wrapper">
   <div className="cl-page">
     <Header mainTitle="Cole Geerts" />
-    <div>
+    <div className="cl-page-content">
       <h2>Privacy</h2>
     </div>
   </div>

@@ -1,0 +1,32 @@
+.page-contact {
+  min-height: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  @include breakpoint("medium") {
+    grid-template-columns: 60% 40%;
+  }
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-primary {
+    height: 100%;
+    width: 100%;
+  }
+  .contact-secondary {
+    height: 100%;
+    width: 100%;
+  }
+  .contact-cta {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+  }
+  .contact-form {
+    background-color: green;
+    width: 300px;
+    height: 300px;
+  }
+}
