@@ -24,7 +24,7 @@
     height: 100%;
     min-height: 30px;
     @include breakpoint("medium") {
-      border-right: 2px solid color("black");
+      border-right: $line;
     }
   }
   .contact-form .cl-form {
