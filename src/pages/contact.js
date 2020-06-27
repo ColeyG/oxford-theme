@@ -7,7 +7,12 @@ export default () => (<div className="cl-wrapper">
     <Header mainTitle="Cole Geerts" />
     <div className="cl-page-content page-contact">
       <div className="contact-section contact-primary">
-        <div className="contact-cta"></div>
+        <div className="contact-cta">
+          <div className="contact-cta-text">
+            <h2>Let's Get in Touch!</h2>
+            <p>I'd love to talk about your newest project or favourite tech. Reach out and let's get started!</p>
+          </div>
+        </div>
       </div>
       <div className="contact-section contact-secondary">
         <div className="contact-form">
