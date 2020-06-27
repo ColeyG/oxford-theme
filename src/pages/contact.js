@@ -19,6 +19,7 @@ export default () => (<div className="cl-wrapper">
             <label htmlFor="message" className="cl-label">Enter a Message</label>
             <textarea className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
             <button className="cl-btn-primary">Submit</button>
+            <a href="mailto:cjgeerts@gmail.com?subject=From colegeerts.com">Use Email Instead</a>
           </form>
         </div>
       </div>
