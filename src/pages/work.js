@@ -6,7 +6,7 @@ export default () => (<div className="cl-wrapper">
   <div className="cl-page">
     <Header mainTitle="Cole Geerts" />
     <div className="cl-page-content">
-      <h2>Work</h2>
+      <h2>What I do...</h2>
     </div>
   </div>
   <Footer />
