@@ -40,6 +40,9 @@
     }
     .contact-cta-text {
       padding: spacing("gutter", "rbl");
+      p {
+        margin-top: spacing("gutter");
+      }
     }
   }
   .contact-form .cl-form {
