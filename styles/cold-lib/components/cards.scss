@@ -99,3 +99,9 @@
 .cl-related-posts {
   @include cl-related-posts();
 }
+
+// Soft hero cards
+
+.cl-hero-card {
+  @include cl-card();
+}

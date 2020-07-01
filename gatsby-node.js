@@ -20,13 +20,15 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  actions.createPage({
-    path: 'examples',
-    component: require.resolve('./src/templates/example.js'),
-    context: {
-      name: 'Squirtle',
-    },
-  });
+  if (process.env.NODE_ENV !== 'production') {
+    actions.createPage({
+      path: 'examples',
+      component: require.resolve('./src/templates/example.js'),
+      context: {
+        name: 'Squirtle',
+      },
+    });
+  }
 
   const result = await graphql(`
   {
