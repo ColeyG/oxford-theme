@@ -31,25 +31,26 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const result = await graphql(`
-  {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            image
-            path
-            type
-            backupImage
+    {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              image
+              path
+              type
+              backupImage
+            }
           }
         }
       }
     }
-  }
-`);
+  `);
+
   const { edges } = result.data.allMarkdownRemark;
   edges.forEach(({ node }) => {
     const relatedArticles = [];
