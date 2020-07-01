@@ -102,6 +102,21 @@
 
 // Soft hero cards
 
-.cl-hero-card {
-  @include cl-card();
+.cl-card-soft-shadow {
+  background: none repeat scroll 0 0 color("white");
+  box-sizing: border-box;
+  border-radius: 7px;
+  margin: spacing("gutter", "rb");
+  position: relative;
+  .cl-card-hero {
+    margin: 0;
+  }
+  @include curved-shadow();
+}
+
+.cl-card-hero {
+  @include cl-card(500px);
+  .cl-card-body {
+    box-shadow: none;
+  }
 }

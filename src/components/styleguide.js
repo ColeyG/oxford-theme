@@ -77,6 +77,21 @@ class Styleguide extends React.Component {
               <Card backupImage={'optimized/autumn.jpeg'} cardTitle="With Backup Image" />
               <Card cardTitle="No Image" />
             </CardContainer>
+            <h2>Special Cards</h2>
+            <CardContainer>
+              <div className="cl-card-soft-shadow">
+                <div className="cl-card-hero">
+                  <div className="cl-card-body">
+                  </div>
+                </div>
+              </div>
+              <div className="cl-card-soft-shadow">
+                <div className="cl-card-hero">
+                  <div className="cl-card-body">
+                  </div>
+                </div>
+              </div>
+            </CardContainer>
           </div>
           <div>
             <h2>Footer</h2>

@@ -1,0 +1,24 @@
+@mixin curved-shadow() {
+  $side-offset: 10px;
+  $rotation: 3deg;
+
+  &:before,
+  &:after {
+    background: none repeat scroll 0 0 rgba(color("black"), 0.35);
+    box-shadow: 0 15px 10px rgba(color("black"), 0.35);
+    bottom: 13px;
+    content: "";
+    left: $side-offset;
+    max-width: 300px;
+    position: absolute;
+    top: 80%;
+    transform: rotate(-$rotation);
+    width: 60%;
+    z-index: -1;
+  }
+  &:after {
+    left: auto;
+    right: $side-offset;
+    transform: rotate($rotation);
+  }
+}
