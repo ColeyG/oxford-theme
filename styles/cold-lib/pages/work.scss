@@ -1,0 +1,12 @@
+.page-work {
+  .work-title {
+    font-size: 24pt;
+  }
+  .work-body-text {
+    font-size: 20pt;
+    line-height: 28px;
+    text-indent: spacing("gutter");
+    padding: spacing("gutter", "tb");
+    border-bottom: $line;
+  }
+}
