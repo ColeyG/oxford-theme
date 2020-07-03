@@ -3,9 +3,9 @@
     font-size: 24pt;
   }
   .work-body-text {
-    font-size: 16pt;
+    font-size: 12pt;
     @include breakpoint("medium") {
-      font-size: 20pt;
+      font-size: 18pt;
     }
     line-height: 28px;
     text-indent: spacing("gutter");
@@ -41,11 +41,11 @@
         width: min-content;
       }
       .work-card-text {
-        font-size: 16pt;
+        font-size: 12pt;
         line-height: 26px;
         margin-top: spacing("gutter") / 2;
         @include breakpoint("medium") {
-          font-size: 20pt;
+          font-size: 18pt;
           margin: spacing("gutter");
         }
       }
