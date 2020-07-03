@@ -6,7 +6,45 @@
     font-size: 20pt;
     line-height: 28px;
     text-indent: spacing("gutter");
-    padding: spacing("gutter", "tb");
-    border-bottom: $line;
+    margin-top: 10px;
+    padding: spacing("gutter", "b");
+  }
+  .work-card-con {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-top: $line;
+    .work-card-row {
+      margin-top: spacing("gutter") / 2;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      @include breakpoint("medium") {
+        flex-direction: row;
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
+      &:nth-child(even) {
+        .work-card-image {
+          align-self: flex-end;
+        }
+      }
+      .work-card-image {
+        width: min-content;
+      }
+      .work-card-text {
+        font-size: 20pt;
+        line-height: 26px;
+        margin-top: spacing("gutter") / 2;
+        @include breakpoint("medium") {
+          margin: spacing("gutter");
+        }
+      }
+    }
   }
 }

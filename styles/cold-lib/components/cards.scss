@@ -106,7 +106,6 @@
   background: none repeat scroll 0 0 color("white");
   box-sizing: border-box;
   border-radius: 7px;
-  margin: spacing("gutter", "rb");
   position: relative;
   .cl-card-hero {
     margin: 0;
@@ -115,8 +114,22 @@
 }
 
 .cl-card-hero {
-  @include cl-card(500px);
+  @include cl-card(300px);
+  @include breakpoint("small") {
+    @include cl-card(400px);
+  }
+  @include breakpoint("medium") {
+    @include cl-card(500px);
+  }
   .cl-card-body {
     box-shadow: none;
+    background-color: color("white");
+    padding: 0;
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 }

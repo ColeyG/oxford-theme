@@ -9,4 +9,7 @@
   form {
     @include flex-s-s-c();
   }
+  .cl-card-soft-shadow {
+    margin: spacing("gutter", "rb");
+  }
 }
