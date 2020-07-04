@@ -48,6 +48,13 @@
           font-size: 18pt;
           margin: spacing("gutter");
         }
+        a {
+          font-size: 12pt;
+          line-height: 18px;
+          @include breakpoint("medium") {
+            font-size: 18pt;
+          }
+        }
       }
     }
   }
