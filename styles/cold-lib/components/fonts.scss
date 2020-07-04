@@ -98,8 +98,12 @@ a {
 }
 
 em,
-strong,
 i {
   @include font-highlight();
   font-style: italic;
+}
+
+strong {
+  @include font-highlight();
+  font-weight: bold;
 }
