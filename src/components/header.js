@@ -10,7 +10,7 @@ class Header extends React.Component {
         </Link>
         <nav>
           <ul>
-            <li><Link to="/work" className="cl-a-primary">About My Work</Link></li>
+            <li><Link to="/about" className="cl-a-primary">About My Work</Link></li>
             <li><Link to="/resume" className="cl-a-secondary">Resum&eacute;</Link></li>
             <li><Link to="/contact" className="cl-a-tertiary">Contact</Link></li>
             <li><Link to="/blog" className="cl-a-reverse">Blog</Link></li>

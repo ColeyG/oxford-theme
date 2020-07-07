@@ -123,7 +123,7 @@
   }
   .cl-card-body {
     box-shadow: none;
-    background-color: color("white");
+    background-color: darken(color("white"), 2%);
     padding: 0;
     img {
       object-fit: cover;

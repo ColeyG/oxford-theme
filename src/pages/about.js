@@ -18,7 +18,7 @@ export default () => (<div className="cl-wrapper">
       <div className="work-card-con">
         <div className="work-card-row">
           <div className="work-card-image">
-            <HeroCard bgImage={'optimized/autumn.jpeg'} />
+            <HeroCard bgImage={'about-cards/js-card.svg'} />
           </div>
           <p className="work-card-text">
             Javascript is my bread and butter. Node rules and I love the React Ecosystem!
@@ -29,7 +29,7 @@ export default () => (<div className="cl-wrapper">
         </div>
         <div className="work-card-row">
           <div className="work-card-image">
-            <HeroCard bgImage={'optimized/autumn.jpeg'} />
+            <HeroCard bgImage={'about-cards/php-card.svg'} />
           </div>
           <p className="work-card-text">
             Professionally, PHP has been a cornerstone language for me. From frameworks like Laravel, Drupal, and even Magento, I've had experience in most of the big names.
@@ -38,7 +38,7 @@ export default () => (<div className="cl-wrapper">
         </div>
         <div className="work-card-row">
           <div className="work-card-image">
-            <HeroCard bgImage={'optimized/autumn.jpeg'} />
+            <HeroCard bgImage={'about-cards/css-card.svg'} />
           </div>
           <p className="work-card-text">
             Styling in CSS is great, but it goes so much deeper. Creating maintainable, precise stylesheets through preprocessors like Sass or Less is an important art.
@@ -47,7 +47,7 @@ export default () => (<div className="cl-wrapper">
         </div>
         <div className="work-card-row">
           <div className="work-card-image">
-            <HeroCard bgImage={'optimized/autumn.jpeg'} />
+            <HeroCard bgImage={'about-cards/c-card.svg'} />
           </div>
           <p className="work-card-text">
             While I've never applied them professionally, my explorations of C &amp; C++ have been instrumental in my understanding of programming. I love experimenting with
@@ -58,7 +58,7 @@ export default () => (<div className="cl-wrapper">
         </div>
         <div className="work-card-row">
           <div className="work-card-image">
-            <HeroCard bgImage={'optimized/autumn.jpeg'} />
+            <HeroCard bgImage={'about-cards/python-card.svg'} />
           </div>
           <p className="work-card-text">
             While in most situations where an <a href="https://en.wikipedia.org/wiki/Interpreted_language#:~:text=An%20interpreted%20language%20is%20a,program%20into%20machine%2Dlanguage%20instructions." target="_blank" rel="noopener noreferrer" className="cl-a-secondary">interpreted language</a> would be appropriate,
