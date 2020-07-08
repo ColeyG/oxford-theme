@@ -11,7 +11,7 @@ export default ({ data }) => {
   const { edges } = allMarkdownRemark;
 
   const featuredContent = [
-    'Gameboy Advance Demo', // TODO: Load featured content from a config
+    'GBA Demo', // TODO: Load featured content from a config
     'Gatsby & React',
   ];
   const featuredContentPosts = [];

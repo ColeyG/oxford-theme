@@ -1,10 +1,10 @@
 ---
 path: "/blog/gameboy-advance-demo"
 date: "2020-07-03"
-title: "Gameboy Advance Demo"
+title: "GBA Demo"
 type: "Tech"
-backupImage: "froggers.png"
-backupImageAlt: "Gameboy Advance Game"
+backupImage: "gba-card.svg"
+backupImageAlt: "GBA Logo"
 ---
 So I have an ongoing problem.
 

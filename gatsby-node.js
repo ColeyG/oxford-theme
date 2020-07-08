@@ -30,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   }
 
+  // TODO: I think we could bind a card colour for default colous on cards with a "backup" image.
   const result = await graphql(`
     {
       allMarkdownRemark(
