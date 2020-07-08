@@ -71,7 +71,7 @@ export default () => (<div className="cl-wrapper">
       <div className="work-extras">
         <h2 className="work-title">Extras</h2>
         <p className="work-body-text">
-          Otherwise, my hobbies include programming, Magic: the Gathering, competitive games, and I love to read whether it be technical knowledge related to programming or even simply fantasy or fiction. I'm deep into 00's Punk and Punk music inspired by that
+          Otherwise, my hobbies include <i>of course, more programming</i>, Magic: the Gathering, competitive games, and I love to read whether it be technical knowledge related to programming or even simply fantasy or fiction. I'm deep into 00's Punk and Punk music inspired by that
           era. Vintage gaming is also a muse for me. I love tinkering with old hardware and building something great for it, so if it has anything to do with <a href="https://en.wikipedia.org/wiki/Homebrew_(video_games)" target="_blank" rel="noopener noreferrer" className="cl-a-tertiary">homebrew</a> I
           likely love it.
         </p>
