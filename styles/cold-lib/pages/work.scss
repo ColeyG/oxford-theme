@@ -19,6 +19,8 @@
     flex-direction: column;
     width: 100%;
     border-top: $line;
+    border-bottom: $line;
+    padding-bottom: spacing("gutter") / 2;
     .work-card-row {
       margin-top: spacing("gutter") / 2;
       width: 100%;
@@ -55,6 +57,17 @@
             font-size: 18pt;
           }
         }
+      }
+    }
+  }
+  .work-extras {
+    margin-top: spacing("gutter");
+    a {
+      text-indent: 0;
+      font-size: 12pt;
+      line-height: 18px;
+      @include breakpoint("medium") {
+        font-size: 18pt;
       }
     }
   }
