@@ -19,7 +19,7 @@ export default () => {
     e.preventDefault();
 
     fetch(`https://functions.colegeerts.com/?function=email&name=${name}&email=${email}&message=${message}`, { method: 'POST' })
-      .then((resp) => resp.JSON())
+      .then((resp) => resp.json())
       .then((data) => {
         if (data.error) {
           setFailureState(data);
