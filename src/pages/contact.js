@@ -6,8 +6,6 @@ export default () => {
   function submitForm(e) {
     e.preventDefault();
 
-    console.log('Submitting...');
-
     fetch('https://functions.colegeerts.com/?function=email&key=213409', { method: 'POST' })
       .then((resp) => resp.text())
       .then((data) => {
