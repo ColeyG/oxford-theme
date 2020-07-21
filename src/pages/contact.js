@@ -26,8 +26,6 @@ export default () => {
         } else {
           setSuccessState(data);
         }
-      }).catch((error) => {
-        console.log('Failed to Fetch');
       });
   }
 
