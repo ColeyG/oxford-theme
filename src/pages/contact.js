@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  function setFailureState(data) {
+    console.log(data);
+  }
+
+  function setSuccessState(data) {
+    console.log(data);
+  }
+
   function submitForm(e) {
     e.preventDefault();
 
-    fetch('https://functions.colegeerts.com/?function=email&key=213409', { method: 'POST' })
-      .then((resp) => resp.text())
+    fetch(`https://functions.colegeerts.com/?function=email&name=${name}&email=${email}&message=${message}`, { method: 'POST' })
+      .then((resp) => resp.JSON())
       .then((data) => {
-        console.log(data);
+        if (data.error) {
+          setFailureState(data);
+        } else {
+          setSuccessState(data);
+        }
+      }).catch((error) => {
+        console.log('Failed to Fetch');
       });
   }
 
@@ -30,11 +48,11 @@ export default () => {
             <div className="contact-form">
               <form action="" className='cl-form'>
                 <label htmlFor="name" className="cl-label">Name</label>
-                <input className="cl-input" type="text" name="name" id="name" />
+                <input onChange={(e) => setName(e.target.value)} className="cl-input" type="text" name="name" id="name" />
                 <label htmlFor="email" className="cl-label">Email</label>
-                <input className="cl-input" type="text" name="email" id="email" />
+                <input onChange={(e) => setEmail(e.target.value)} className="cl-input" type="text" name="email" id="email" />
                 <label htmlFor="message" className="cl-label">Enter a Message</label>
-                <textarea className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
+                <textarea onChange={(e) => setMessage(e.target.value)} className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
                 <button onClick={submitForm} className="cl-btn-primary">Submit</button>
                 <a href="mailto:cjgeerts@gmail.com?subject=From colegeerts.com">Use Email Instead</a>
               </form>
