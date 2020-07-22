@@ -19,11 +19,6 @@
   .contact-secondary {
     height: 100%;
     width: 100%;
-    a {
-      font-style: italic;
-      text-decoration: underline;
-      margin-left: 10px;
-    }
   }
   .contact-cta {
     width: 100%;
@@ -66,7 +61,15 @@
     .form-loader {
       width: 10px;
       height: 10px;
-      background-color: red;
+    }
+    p,
+    a {
+      margin-top: spacing("gutter");
+    }
+    a {
+      display: block;
+      font-style: italic;
+      text-decoration: underline;
     }
   }
 }

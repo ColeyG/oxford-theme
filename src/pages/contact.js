@@ -39,6 +39,17 @@ export default () => {
       });
   }
 
+  function formInitialState(e) {
+    e.preventDefault();
+
+    setName('');
+    setEmail('');
+    setMessage('');
+
+    setFormLoadingState(false);
+    setFormFinishedState(false);
+  }
+
   return (
     <div className="cl-wrapper">
       <div className="cl-page">
@@ -54,7 +65,11 @@ export default () => {
           </div>
           <div className="contact-section contact-secondary">
             <div className={`contact-form-overlay ${formFinishedState ? 'cl-shown' : 'cl-hidden'}`}>
-              <div className="form-loader" style={{ backgroundColor: 'blue' }}></div>
+              <div>
+                <h3>Message Sent Successfully!</h3>
+                <p>I'll reach out to you as soon as possible!</p>
+                <a href="#" onClick={formInitialState}>Send Another Message</a>
+              </div>
             </div>
             <div className={`contact-form-overlay ${formLoadingState ? 'cl-shown' : 'cl-hidden'}`}>
               <div className="form-loader"></div>
@@ -62,11 +77,11 @@ export default () => {
             <div className="contact-form">
               <form action="" className='cl-form'>
                 <label htmlFor="name" className="cl-label">Name</label>
-                <input onChange={(e) => setName(e.target.value)} className="cl-input" type="text" name="name" id="name" />
+                <input onChange={(e) => setName(e.target.value)} value={name} className="cl-input" type="text" name="name" id="name" />
                 <label htmlFor="email" className="cl-label">Email</label>
-                <input onChange={(e) => setEmail(e.target.value)} className="cl-input" type="text" name="email" id="email" />
+                <input onChange={(e) => setEmail(e.target.value)} value={email} className="cl-input" type="text" name="email" id="email" />
                 <label htmlFor="message" className="cl-label">Enter a Message</label>
-                <textarea onChange={(e) => setMessage(e.target.value)} className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
+                <textarea onChange={(e) => setMessage(e.target.value)} value={message} className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
                 <button onClick={submitForm} className="cl-btn-primary">Submit</button>
                 <a href="mailto:cjgeerts@gmail.com?subject=From colegeerts.com">Use Email Instead</a>
               </form>
