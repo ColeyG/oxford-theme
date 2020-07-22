@@ -7,16 +7,26 @@ export default () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const [formLoadingState, setFormState] = useState(false);
+  const [formFinishedState, setFormFinishedState] = useState(false);
+
   function setFailureState(data) {
     console.log(data);
+
+    setFormLoadingState(true);
   }
 
   function setSuccessState(data) {
     console.log(data);
+
+    setFormLoadingState(true);
+    setFormFinishedState(true);
   }
 
   function submitForm(e) {
     e.preventDefault();
+
+    setFormLoadingState(true);
 
     fetch(`https://functions.colegeerts.com/?function=email&name=${name}&email=${email}&message=${message}`, { method: 'POST' })
       .then((resp) => resp.json())
@@ -43,6 +53,12 @@ export default () => {
             </div>
           </div>
           <div className="contact-section contact-secondary">
+            <div className={`contact-form-overlay ${formFinishedState ? 'cl-shown' : 'cl-hidden'}`}>
+              <div className="form-loader" style={{ backgroundColor: 'blue' }}></div>
+            </div>
+            <div className={`contact-form-overlay ${formLoadingState ? 'cl-shown' : 'cl-hidden'}`}>
+              <div className="form-loader"></div>
+            </div>
             <div className="contact-form">
               <form action="" className='cl-form'>
                 <label htmlFor="name" className="cl-label">Name</label>
