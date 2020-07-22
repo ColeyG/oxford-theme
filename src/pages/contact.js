@@ -13,13 +13,13 @@ export default () => {
   function setFailureState(data) {
     console.log(data);
 
-    setFormLoadingState(true);
+    setFormLoadingState(false);
   }
 
   function setSuccessState(data) {
     console.log(data);
 
-    setFormLoadingState(true);
+    setFormLoadingState(false);
     setFormFinishedState(true);
   }
 
