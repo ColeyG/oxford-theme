@@ -83,5 +83,9 @@
       margin-top: spacing("gutter");
       display: block;
     }
+    a {
+      font-style: italic;
+      text-decoration: underline;
+    }
   }
 }
