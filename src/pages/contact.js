@@ -10,15 +10,31 @@ export default () => {
   const [formLoadingState, setFormLoadingState] = useState(false);
   const [formFinishedState, setFormFinishedState] = useState(false);
 
-  function setFailureState(data) {
-    console.log(data);
+  const [errors, setErrors] = useState(false);
 
+  const [nameErr, setNameErr] = useState(false);
+  const [emailErr, setEmailErr] = useState(false);
+  const [messageErr, setMessageErr] = useState(false);
+
+  function setFailureState(data) {
     setFormLoadingState(false);
+
+    setErrors(true);
+
+    data.error.forEach((error) => {
+      if (error === 'name') {
+        setNameErr(true);
+      }
+      if (error === 'email') {
+        setEmailErr(true);
+      }
+      if (error === 'message') {
+        setMessageErr(true);
+      }
+    });
   }
 
   function setSuccessState(data) {
-    console.log(data);
-
     setFormLoadingState(false);
     setFormFinishedState(true);
   }
@@ -45,6 +61,10 @@ export default () => {
     setName('');
     setEmail('');
     setMessage('');
+
+    setNameErr(false);
+    setEmailErr(false);
+    setMessageErr(false);
 
     setFormLoadingState(false);
     setFormFinishedState(false);
@@ -77,13 +97,14 @@ export default () => {
             <div className="contact-form">
               <form action="" className='cl-form'>
                 <label htmlFor="name" className="cl-label">Name</label>
-                <input onChange={(e) => setName(e.target.value)} value={name} className="cl-input" type="text" name="name" id="name" />
+                <input onChange={(e) => setName(e.target.value)} value={name} className={`cl-input ${nameErr ? 'form-error-input' : ''}`} type="text" name="name" id="name" />
                 <label htmlFor="email" className="cl-label">Email</label>
-                <input onChange={(e) => setEmail(e.target.value)} value={email} className="cl-input" type="text" name="email" id="email" />
+                <input onChange={(e) => setEmail(e.target.value)} value={email} className={`cl-input ${emailErr ? 'form-error-input' : ''}`} type="text" name="email" id="email" />
                 <label htmlFor="message" className="cl-label">Enter a Message</label>
-                <textarea onChange={(e) => setMessage(e.target.value)} value={message} className="cl-textarea" name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
+                <textarea onChange={(e) => setMessage(e.target.value)} value={message} className={`cl-textarea ${messageErr ? 'form-error-input' : ''}`} name="" id="" cols="30" rows="10" name="message" id="message"></textarea>
                 <button onClick={submitForm} className="cl-btn-primary">Submit</button>
                 <a href="mailto:cjgeerts@gmail.com?subject=From colegeerts.com">Use Email Instead</a>
+                <p className={`form-error ${errors ? 'cl-shown' : 'cl-hidden'}`}>Some fields need your attention</p>
               </form>
             </div>
           </div>

@@ -46,6 +46,22 @@
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
+    input {
+      box-sizing: border-box;
+    }
+    a {
+      font-style: italic;
+      text-decoration: underline;
+    }
+    p {
+      margin-top: spacing("gutter");
+    }
+    .form-error {
+      color: color("failure");
+    }
+    .form-error-input {
+      box-shadow: 5px 5px 1px color("warning");
+    }
   }
   .contact-form-overlay {
     background-color: rgba(color("white"), 0.5);
@@ -65,11 +81,7 @@
     p,
     a {
       margin-top: spacing("gutter");
-    }
-    a {
       display: block;
-      font-style: italic;
-      text-decoration: underline;
     }
   }
 }

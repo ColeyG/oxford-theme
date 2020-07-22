@@ -22,6 +22,7 @@
 @mixin cl-hidden() {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .cl-hidden {
