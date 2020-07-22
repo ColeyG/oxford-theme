@@ -7,7 +7,7 @@ export default () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const [formLoadingState, setFormState] = useState(false);
+  const [formLoadingState, setFormLoadingState] = useState(false);
   const [formFinishedState, setFormFinishedState] = useState(false);
 
   function setFailureState(data) {
