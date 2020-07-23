@@ -52,7 +52,7 @@ p {
     font-weight: 800;
     text-decoration: none;
     height: 11px;
-    border-bottom: 7px solid rgba(color("primary"), 0.35);
+    border-bottom: 8px solid rgba(color("primary"), 0.35);
     display: inline-block;
     padding: 0 2px;
   }
@@ -70,15 +70,15 @@ code {
   font-weight: 800;
   text-decoration: none;
   height: 11px;
-  border-bottom: 7px solid rgba(color("primary"), 0.35);
+  border-bottom: 8px solid rgba(color("primary"), 0.35);
   display: inline-block;
   padding: 0 2px;
 }
 .cl-a-secondary {
-  border-bottom: 7px solid rgba(color("secondary"), 0.35);
+  border-bottom: 8px solid rgba(color("secondary"), 0.35);
 }
 .cl-a-tertiary {
-  border-bottom: 7px solid rgba(color("tertiary"), 0.35);
+  border-bottom: 8px solid rgba(color("tertiary"), 0.35);
 }
 .cl-a-reverse {
   color: color("white");
