@@ -24,6 +24,13 @@
     color: color("white");
     padding: 0 4px;
   }
+  pre {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: color("black");
+    border-radius: 7px;
+  }
   .cl-article-image {
     max-width: 100%;
     box-shadow: 0 2px 3px rgba(color("black"), 0.25);
