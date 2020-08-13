@@ -4,6 +4,17 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Jost',
+          'Noto Sans',
+          'Ubuntu Mono',
+        ],
+        display: 'swap',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown',
