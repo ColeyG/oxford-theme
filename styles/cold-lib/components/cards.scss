@@ -20,7 +20,7 @@
 }
 
 @mixin cl-card($scale: 300px) {
-  animation: fadein 0.5s;
+  animation: fadein 0.2s;
   width: $scale / 1.2; // To maintain a weird but good aspect ratio
   height: $scale / 2;
   &:nth-last-child(even) {
