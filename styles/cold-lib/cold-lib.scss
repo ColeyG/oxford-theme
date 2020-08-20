@@ -42,6 +42,7 @@
 // Page Imports: Full Pages applied to only a specific page
 @import "./cold-lib/pages/contact.scss";
 @import "./cold-lib/pages/work.scss";
+@import "./cold-lib/pages/resume.scss";
 
 @mixin center-article() {
   display: flex;

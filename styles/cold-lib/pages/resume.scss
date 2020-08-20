@@ -1,0 +1,16 @@
+.page-resume {
+  .resume-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    .resume-download {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      a {
+        margin: 10px;
+      }
+    }
+  }
+}

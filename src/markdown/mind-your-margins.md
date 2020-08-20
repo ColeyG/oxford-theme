@@ -26,3 +26,9 @@ This is a really simple JS script that can help point out the invisible offender
 Yeah, it looks gross, but I think that it should make it easy enough to right-click the area to find a selector to edit. To use it simply copy & paste it into the console and run it. Anything painted that is too large for the screen is then either forcing outside of its container or one of its children is overflowing its size.
 
 Anyways, the idea doesn't deserve much fan-fare, but maybe I will toss some offenders in the revisions the next time I see one.
+
+_During the testing of this page I found a bug using the script! Screenshot attached:_
+
+![This page displayed with the content of the code snippet overflowing on the right side](./images/mind-your-margins-screenshot.png)
+
+_Silly horizontal scroll..._

@@ -22,9 +22,9 @@ export default () => (<div className="cl-wrapper">
           </div>
           <p className="work-card-text">
             Javascript is my bread and butter. Node rules and I love the React Ecosystem!
-            This site is <a href="https://github.com/ColeyG/oxford-theme" target="_blank" rel="noopener noreferrer" className="cl-a-secondary">built with love using Gatsby</a>.
-            I definitely believe in the "JS Everywhere" stack and I never hesitate to choose JS when it is right for the project. I've also had experience with Vue, Pupeteer, and jQuery to
-            name more big players in the JS field.
+            This site is <a href="https://github.com/ColeyG/oxford-theme" target="_blank" rel="noopener noreferrer" className="cl-a-secondary">built with love using Gatsby with React</a>.
+            I definitely believe in the "JS Everywhere" stack and I never hesitate to choose JS when it is right for the project. I've also had experience with Vue, Puppeteer, and jQuery to
+            name more players in the JS field.
           </p>
         </div>
         <div className="work-card-row">
