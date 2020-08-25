@@ -5,7 +5,7 @@ title: "Mind your Margins"
 type: "Rant"
 # image: "gatsby-and-react.svg"
 # imageAlt: "Gatsby and React Logos"
-backupImage: "willow-beach.jpg"
+backupImage: "optimized/willow-beach-optimized.jpg"
 backupImageAlt: "Margin Icon"
 ---
 Every webdev has a site launch checklist. A set of objectives or metrics a site needs to pass before launch. I think this is something that should get added to each and every one of your lists. And I say this because I have seen a huge number of large scale sites fall for this one, and it is such a simple fix to get your site feeling a little more consistent and professional.
