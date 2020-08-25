@@ -7,6 +7,18 @@
   }
 }
 
+@keyframes fadeinslow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @mixin cl-card-container() {
   padding: spacing("gutter", "t");
   display: flex;
@@ -61,6 +73,9 @@
       line-height: 24px;
     }
     .tag {
+      animation: fadeinslow 1s;
+      color: color("white");
+      text-shadow: 0 1.5px color("black");
       box-sizing: border-box;
       display: block;
       position: absolute;
