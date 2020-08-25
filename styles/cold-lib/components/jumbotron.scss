@@ -68,7 +68,6 @@
     flex-direction: column;
     background-image: url("../assets/homepage-bg.svg");
     background-size: 100% 100%;
-    animation: fadein 0.5s;
     @include breakpoint("medium") {
       margin-right: 100px;
     }
