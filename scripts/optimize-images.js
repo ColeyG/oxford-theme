@@ -24,3 +24,5 @@ Promise.all(
       .toFile(optimizedName.replace('assets/', 'assets/optimized/'));
   }),
 );
+
+// TODO: Improve this workflow such that the images are sized with a target weight in mind automatically instead of over a max width.
