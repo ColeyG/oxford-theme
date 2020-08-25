@@ -18,6 +18,8 @@ Programming like this is obviously not scalable, but it is **SO** fun! The only 
 
 That is why I find myself writing for the weirdest stacks. Even if it is just a demo, I know so much more about the software here than I would have ever If I had chose Unity or Godot (I still like those platforms to tell the truth). So, I tried writing a little C. Following the guide [by reinterpretcast.com](https://www.reinterpretcast.com/writing-a-game-boy-advance-game) I started understanding my toolchain. Thankfully, a large number of Nintendo devkits for older hardware are really easy to use. In specifically the GBA, the compiler really just adds context information to your program, like memory addresses of I/O and the linker links your program for the GBA.
 
-// TODO: Image Here
+While my demo is nothing more than a toy, I am still super proud of the accomplishment. That is _compiling something so old_. Without a CS degree, what used to be scary (I used to tremble at the though of C) is now easily accomplished so long as you know where to find documentation. And hey, if anyone wants it; [here's the repo](https://github.com/ColeyG/coles-gba-demo).
+
+![My Gameboy Demo Start Screen. "Press L + R to Start"](./images/gba-game.png)
 
 Even if it is just for the Gameboy, I'd suggest that everyone that is at least mildly interested in programming or games to take a stab at something like this. I think a lot of programming introductions happen these days with high abstractions and without proper context some coding skills seem to be lost. I hope that eventually some stack comes around that feels the same way some day. [Amethyst](https://github.com/amethyst/amethyst) seems promising.
