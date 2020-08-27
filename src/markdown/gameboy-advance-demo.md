@@ -5,6 +5,7 @@ title: "GBA Demo"
 type: "Tech"
 backupImage: "gba-card.svg"
 backupImageAlt: "GBA Logo"
+revisions: ['Aug 25, 2020']
 ---
 So I have an ongoing problem.
 

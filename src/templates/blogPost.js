@@ -9,6 +9,7 @@ export default function Template({ data, pageContext }) {
   const { frontmatter, html } = markdownRemark;
   let imageArea = null;
   let date = null;
+  let revisions = null;
   let related = null;
 
   if (frontmatter.image) {
@@ -16,7 +17,25 @@ export default function Template({ data, pageContext }) {
   }
 
   if (frontmatter.date) {
-    date = <p className="cl-date">{frontmatter.date}</p>;
+    if (frontmatter.revisions) {
+      date = <p className="cl-date">Originally Posted on: {frontmatter.date}</p>;
+    } else {
+      date = <p className="cl-date">{frontmatter.date}</p>;
+    }
+  }
+
+  if (frontmatter.revisions) {
+    let revisionString = '';
+
+    frontmatter.revisions.forEach((rev, index) => {
+      if (frontmatter.revisions.length !== index + 1) {
+        revisionString += `${rev}, `;
+      } else {
+        revisionString += `${rev}`;
+      }
+    });
+
+    revisions = <p className="cl-date">Revisions: {revisionString}</p>;
   }
 
   if (frontmatter.type && pageContext.related.length) {
@@ -27,14 +46,17 @@ export default function Template({ data, pageContext }) {
     <div className="cl-wrapper">
       <div className="cl-page">
         <Header mainTitle="Cole Geerts" />
-        <div className="cl-article">
-          <h2>{frontmatter.title}</h2>
-          {date}
-          {imageArea}
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+        <div className="cl-article-wrapper">
+          <div className="cl-article">
+            <h2>{frontmatter.title}</h2>
+            {date}
+            {revisions}
+            {imageArea}
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
         </div>
         {related}
       </div>
@@ -53,6 +75,7 @@ export const pageQuery = graphql`
         title
         image
         type
+        revisions
       }
     }
   }
