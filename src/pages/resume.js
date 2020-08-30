@@ -17,7 +17,7 @@ export default () => (<div className="cl-wrapper">
           <h2>Cole Geerts</h2>
           <h3>Web Developer</h3>
           <div className="resume-body">
-            <p className="resume-objective">Recent graduate with Advanced Diploma in Interactive Media, aiming to leverage my analytical acumen and passion for web and
+            <p className="resume-objective">Recent graduate with an Advanced Diploma in Interactive Media, aiming to leverage my analytical acumen and passion for web and
 software development. I am an ambitious young professional who has never failed to meet project deadlines and service levels.</p>
             <div className="resume-content">
               <div className="resume-skills">
