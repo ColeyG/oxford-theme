@@ -46,18 +46,18 @@ export default function Template({ data, pageContext }) {
     <div className="cl-wrapper">
       <div className="cl-page">
         <Header mainTitle="Cole Geerts" />
-        <div className="cl-article-wrapper">
-          <div className="cl-article">
-            <h2>{frontmatter.title}</h2>
-            {date}
-            {revisions}
-            {imageArea}
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
+        {/* <div className="cl-article-wrapper"> */}
+        <div className="cl-article">
+          <h2>{frontmatter.title}</h2>
+          {date}
+          {revisions}
+          {imageArea}
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
+        {/* </div> */}
         {related}
       </div>
       <Footer />

@@ -12,5 +12,57 @@
         margin: 10px;
       }
     }
+    .resume {
+      max-width: 1200px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      h3 {
+        margin-top: 5px;
+      }
+      .resume-body {
+        .resume-objective {
+          color: color("tertiary");
+          margin: spacing("gutter", "tb");
+        }
+        .resume-content {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: row;
+          .resume-skills {
+            display: flex;
+            justify-self: start;
+            align-items: flex-end;
+            flex-direction: column;
+            margin: 0 5px;
+            ul {
+              margin-top: spacing("gutter");
+              li {
+                text-align: right;
+                @include font("body");
+                margin-top: 5px;
+              }
+            }
+          }
+          .resume-experience {
+            display: flex;
+            justify-self: start;
+            align-items: flex-start;
+            flex-direction: column;
+            margin: 0 5px;
+            .experience-entry {
+              margin: spacing("gutter", "t");
+              h4,
+              h5,
+              h6 {
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
