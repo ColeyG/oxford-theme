@@ -69,7 +69,7 @@ software development. I am an ambitious young professional who has never failed 
                 </div>
                 <div className="experience-entry">
                   <h4>Fast Food Crew member</h4>
-                  <p>Greeted customers and listened effectively to orders in order to ensure courteous and quick service. Prepared and served drinks and food in accordance with health codes and restaurant standards. Worked as a Junior JHSC member to ensure procedures were followed and improved</p>
+                  <p>Greeted customers and listened effectively to orders in order to ensure courteous and quick service. Prepared and served drinks and food in accordance with health codes and restaurant standards. Worked as a Junior JHSC member to ensure procedures were followed and improved.</p>
                 </div>
                 <h3>Education</h3>
                 <div className="experience-entry">
