@@ -13,28 +13,24 @@ export default ({ data }) => {
   const featuredContent = [
     'GBA Demo', // TODO: Load featured content from a config
     'Gatsby & React',
+    'That Animation',
   ];
   const featuredContentPosts = [];
   const recentPosts = [];
 
-  // Prepping Featured content based on the array above
-  featuredContent.forEach((pageTitle, index) => {
-    edges.forEach((edge) => {
-      const { node } = edge;
-      const { frontmatter } = node;
+  function isFeaturedPost(postName, featuredContent) {
+    return (featuredContent.indexOf(postName) > -1);
+  }
 
-      if (frontmatter.title === pageTitle) {
-        featuredContentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
-      }
-    });
-  });
-
-  // Prepping All posts content
   edges.forEach((edge, index) => {
     const { node } = edge;
     const { frontmatter } = node;
 
-    recentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+    if (isFeaturedPost(frontmatter.title, featuredContent)) {
+      featuredContentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+    } else {
+      recentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+    }
   });
 
   return (
