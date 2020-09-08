@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Header from '../components/header';
 import RelatedPost from '../components/related-posts';
 import Footer from '../components/footer';
@@ -58,6 +58,7 @@ export default function Template({ data, pageContext }) {
           />
         </div>
         {/* </div> */}
+        <p className='article-cta'>Comments, questions, concerns? Something wrong? <Link to="/contact">Contact me here</Link>.</p>
         {related}
       </div>
       <Footer />

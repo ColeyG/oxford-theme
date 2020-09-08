@@ -5,10 +5,15 @@
   align-items: center;
 }
 
+.article-cta {
+  font-style: italic;
+}
+
 .cl-article {
   max-width: 1200px;
   padding: spacing("article", "trbl");
   .blog-post-content {
+    padding: 15px 0;
     h1,
     h2,
     h3,
