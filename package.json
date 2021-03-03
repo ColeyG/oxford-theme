@@ -6,7 +6,7 @@
   "scripts": {
     "optimize-images": "node scripts/optimize-images.js",
     "dev": "gatsby develop",
-    "prod": "npm run optimize-images;gatsby clean; gatsby build",
+    "prod": "gatsby clean; gatsby build",
     "clean": "gatsby clean",
     "lint": "./node_modules/.bin/eslint *.js src/**/**.js --fix;",
     "test": "echo \"Error: no test specified\" && exit 1"
