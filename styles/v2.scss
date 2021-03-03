@@ -1,0 +1,13 @@
+// Since I've vastly changed the way I write scss, I've decided to version the initial work
+.article-container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    a {
+        margin: 2px 0;
+    }
+}

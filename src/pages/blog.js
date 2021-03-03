@@ -1,8 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Header from '../components/header';
-import CardContainer from '../components/card-container';
-import Card from '../components/card';
 import Footer from '../components/footer';
 
 export default ({ data }) => {
@@ -14,17 +12,16 @@ export default ({ data }) => {
     const { node } = edge;
     const { frontmatter } = node;
 
-    blogPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+    blogPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
   });
 
   return (
     <div className="cl-wrapper">
       <div className="cl-page">
         <Header mainTitle="Cole Geerts" />
-        <div className="blog">
-          <CardContainer cardConTitle="All Blog Posts in Order">
-            {blogPosts}
-          </CardContainer>
+        <h3>All Blog Posts In Order</h3>
+        <div className="article-container">
+          {blogPosts}
         </div>
       </div>
       <Footer />
@@ -45,7 +42,6 @@ export const pageQuery = graphql`
           title
           image
           type
-          backupImage
         }
       }
     }

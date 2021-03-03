@@ -44,7 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
               image
               path
               type
-              backupImage
             }
           }
         }
@@ -65,7 +64,6 @@ exports.createPages = async ({ graphql, actions }) => {
             path: edge.node.frontmatter.path,
             image: edge.node.frontmatter.image,
             type: edge.node.frontmatter.type,
-            backupImage: edge.node.frontmatter.backupImage,
           },
         );
       }

@@ -3,8 +3,6 @@ path: "/blog/gameboy-advance-demo"
 date: "2020-07-03"
 title: "GBA Demo"
 type: "Tech"
-backupImage: "gba-card.svg"
-backupImageAlt: "GBA Logo"
 revisions: ['Aug 25, 2020']
 ---
 So I have an ongoing problem.

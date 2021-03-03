@@ -11,6 +11,10 @@
   flex-grow: 999999;
   padding: spacing("gutter");
   box-sizing: border-box;
+
+  h3 {
+    margin-top: 20px;
+  }
 }
 
 @mixin cl-page-content() {

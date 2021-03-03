@@ -3,16 +3,17 @@ import { Link } from 'gatsby';
 
 function Header(props) {
   function refresh(e) {
-    e.preventDefault();
+    // e.preventDefault();
 
-    window.location.assign('/');
+    // This is incase the logo area doesn't cause a refresh (rare bug)
+    // window.location.assign('/');
   }
 
   return (
     <header className="cl-primary-header">
-      <a className="head-logo" href="/" onClick={refresh}>
+      <Link className="head-logo" href="/" onClick={refresh}>
         <h1>{props.mainTitle}</h1>
-      </a>
+      </Link>
       <nav>
         <ul>
           <li><Link to="/about" className="cl-a-primary">About My Work</Link></li>

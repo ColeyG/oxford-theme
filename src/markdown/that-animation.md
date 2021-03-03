@@ -3,10 +3,6 @@ path: "/blog/that-animation"
 date: "2020-09-03"
 title: "That Animation"
 type: "Tech"
-# image: "gatsby-and-react.svg"
-# imageAlt: "Gatsby and React Logos"
-backupImage: "dark-cloud.jpg"
-backupImageAlt: "Letters"
 ---
 Subtle, good web animations can be hard to pull off. And in a medium where you need to be sure that a wide range of devices support what your screen looks like, polish is king. That is why I usually _don't_ advise the over-use of animation in your website. You need to be careful with your choices of library or methodology or your site could end up feeling "jittery". Or maybe your framerate is too low, or maybe slower devices struggle to keep up with the performance of your animation; okay, you see where I am going with this, amateur web animations are sometimes off-putting.
 

@@ -1,9 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Header from '../components/header';
 import Jumbotron from '../components/jumbotron';
-import CardContainer from '../components/card-container';
-import Card from '../components/card';
 import Footer from '../components/footer';
 
 export default ({ data }) => {
@@ -27,9 +25,9 @@ export default ({ data }) => {
     const { frontmatter } = node;
 
     if (isFeaturedPost(frontmatter.title, featuredContent)) {
-      featuredContentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+      featuredContentPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
     } else {
-      recentPosts.push(<Card key={index} bgImage={frontmatter.image} backupImage={frontmatter.backupImage} cardTitle={frontmatter.title} link={frontmatter.path} type={frontmatter.type} />);
+      recentPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
     }
   });
 
@@ -38,12 +36,14 @@ export default ({ data }) => {
       <div className="cl-page">
         <Header mainTitle="Cole Geerts" />
         <Jumbotron exClassName="index-jumbotron" />
-        <CardContainer exClassName="index-section" cardConTitle="Featured Content">
+        <h3>Featured Posts</h3>
+        <div className="article-container">
           {featuredContentPosts}
-        </CardContainer>
-        <CardContainer cardConTitle="Recent Posts">
+        </div>
+        <h3>Recent Posts</h3>
+        <div className="article-container">
           {recentPosts}
-        </CardContainer>
+        </div>
       </div>
       <Footer />
     </div>
@@ -63,7 +63,6 @@ export const pageQuery = graphql`
           title
           image
           type
-          backupImage
         }
       }
     }

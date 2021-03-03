@@ -6,7 +6,6 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import Header from '../components/header';
 import Hi from '../components/hi';
-import Styleguide from '../components/styleguide';
 import Footer from '../components/footer';
 
 export default function Example({ data }) {
@@ -27,7 +26,7 @@ export default function Example({ data }) {
           <p>ID: {data.pokemon.id}</p>
           <Hi />
         </div>
-        <Styleguide />
+        {/* <Styleguide /> */}
       </div>
       <Footer />
     </div>
