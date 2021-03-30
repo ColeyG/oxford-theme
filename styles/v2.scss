@@ -11,3 +11,104 @@
         margin: 2px 0;
     }
 }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin cl-card($scale: 300px) {
+    animation: fadein 0.2s;
+    width: $scale / 1.2; // To maintain a weird but good aspect ratio
+    height: $scale / 2;
+    &:nth-last-child(even) {
+        background-color: rgba(color("primary"), 0.5);
+    }
+    &:nth-last-child(odd) {
+        background-color: rgba(color("secondary"), 0.5);
+    }
+    margin: spacing("gutter", "rb");
+    border-radius: 7px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    .cl-card-image {
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+    .cl-card-image-backup {
+        filter: grayscale(100%);
+        opacity: 0.5;
+    }
+    .cl-card-body {
+        box-shadow: inset 0 0 5px rgba(color("black"), 0.25);
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px;
+        background-color: rgba(color("black"), 0.1);
+        h4 {
+            color: color("white");
+            text-shadow: 1px 1px 2px color("black");
+            line-height: 24px;
+        }
+        .tag {
+            animation: fadeinslow 1s;
+            color: color("white");
+            text-shadow: 0 1.5px color("black");
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            font-style: italic;
+            font-weight: 800;
+            right: 5px;
+            bottom: 5px;
+            padding: 4px;
+            border-radius: 4px;
+            background-color: rgba(color("white"), 0.3);
+            backdrop-filter: blur(5px);
+        }
+    }
+}
+
+.cl-card-soft-shadow {
+    background: none repeat scroll 0 0 color("white");
+    box-sizing: border-box;
+    border-radius: 7px;
+    position: relative;
+    .cl-card-hero {
+        margin: 0;
+    }
+    @include curved-shadow();
+}
+
+.cl-card-hero {
+    @include cl-card(300px);
+    @include breakpoint("small") {
+        @include cl-card(400px);
+    }
+    @include breakpoint("medium") {
+        @include cl-card(500px);
+    }
+    .cl-card-body {
+        box-shadow: none;
+        background-color: darken(color("white"), 2%);
+        padding: 0;
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
