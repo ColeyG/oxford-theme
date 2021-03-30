@@ -4,50 +4,50 @@ import Header from '../components/header';
 import Jumbotron from '../components/jumbotron';
 import Footer from '../components/footer';
 
-export default ({ data }) => {
-  const { allMarkdownRemark } = data;
-  const { edges } = allMarkdownRemark;
+const index = ({ data }) => {
+    const { allMarkdownRemark } = data;
+    const { edges } = allMarkdownRemark;
 
-  const featuredContent = [
-    'GBA Demo', // TODO: Load featured content from a config
-    'Gatsby & React',
-    'That Animation',
-  ];
-  const featuredContentPosts = [];
-  const recentPosts = [];
+    const featuredContent = [
+        'GBA Demo', // TODO: Load featured content from a config
+        'Gatsby & React',
+        'That Animation',
+    ];
+    const featuredContentPosts = [];
+    const recentPosts = [];
 
-  function isFeaturedPost(postName, featuredContent) {
-    return (featuredContent.indexOf(postName) > -1);
-  }
-
-  edges.forEach((edge, index) => {
-    const { node } = edge;
-    const { frontmatter } = node;
-
-    if (isFeaturedPost(frontmatter.title, featuredContent)) {
-      featuredContentPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
-    } else {
-      recentPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
+    function isFeaturedPost(postName, featuredContent) {
+        return (featuredContent.indexOf(postName) > -1);
     }
-  });
 
-  return (
-    <div className="cl-wrapper">
-      <div className="cl-page">
-        <Header mainTitle="Cole Geerts" />
-        <Jumbotron exClassName="index-jumbotron" />
-        <h3>Featured Posts</h3>
-        <div className="article-container">
-          {featuredContentPosts}
+    edges.forEach((edge, index) => {
+        const { node } = edge;
+        const { frontmatter } = node;
+
+        if (isFeaturedPost(frontmatter.title, featuredContent)) {
+            featuredContentPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
+        } else {
+            recentPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
+        }
+    });
+
+    return (
+        <div className="cl-wrapper">
+            <div className="cl-page">
+                <Header mainTitle="Cole Geerts" />
+                <Jumbotron exClassName="index-jumbotron" />
+                <h3>Featured Posts</h3>
+                <div className="article-container">
+                    {featuredContentPosts}
+                </div>
+                <h3>Recent Posts</h3>
+                <div className="article-container">
+                    {recentPosts}
+                </div>
+            </div>
+            <Footer />
         </div>
-        <h3>Recent Posts</h3>
-        <div className="article-container">
-          {recentPosts}
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
+    );
 };
 
 export const pageQuery = graphql`
@@ -69,3 +69,5 @@ export const pageQuery = graphql`
   }
 }
 `;
+
+export default index;

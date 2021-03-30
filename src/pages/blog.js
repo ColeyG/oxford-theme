@@ -3,30 +3,30 @@ import { graphql, Link } from 'gatsby';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
-export default ({ data }) => {
-  const { allMarkdownRemark } = data;
-  const { edges } = allMarkdownRemark;
-  const blogPosts = [];
+const blog = ({ data }) => {
+    const { allMarkdownRemark } = data;
+    const { edges } = allMarkdownRemark;
+    const blogPosts = [];
 
-  edges.forEach((edge, index) => {
-    const { node } = edge;
-    const { frontmatter } = node;
+    edges.forEach((edge, index) => {
+        const { node } = edge;
+        const { frontmatter } = node;
 
-    blogPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
-  });
+        blogPosts.push(<Link key={index} to={frontmatter.path}>{frontmatter.title}</Link>);
+    });
 
-  return (
-    <div className="cl-wrapper">
-      <div className="cl-page">
-        <Header mainTitle="Cole Geerts" />
-        <h3>All Blog Posts In Order</h3>
-        <div className="article-container">
-          {blogPosts}
+    return (
+        <div className="cl-wrapper">
+            <div className="cl-page">
+                <Header mainTitle="Cole Geerts" />
+                <h3>All Blog Posts In Order</h3>
+                <div className="article-container">
+                    {blogPosts}
+                </div>
+            </div>
+            <Footer />
         </div>
-      </div>
-      <Footer />
-    </div>
-  );
+    );
 };
 
 export const pageQuery = graphql`
@@ -48,3 +48,5 @@ export const pageQuery = graphql`
   }
 }
 `;
+
+export default blog;

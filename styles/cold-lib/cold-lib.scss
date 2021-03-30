@@ -16,46 +16,46 @@
 // FIXME: @import is going to be replaced by eoy 2021
 
 // Pallette Imports: Structured imports of expected palette maps
-@import "./cold-lib/palettes/breakpoint-palette.scss";
-@import "./cold-lib/palettes/color-palette.scss";
-@import "./cold-lib/palettes/font-palette.scss";
-@import "./cold-lib/palettes/spacing-palette.scss";
-@import "./cold-lib/palettes/line-palette.scss";
-@import "./cold-lib/palettes/shadow-palette.scss";
+@import "./palettes/breakpoint-palette.scss";
+@import "./palettes/color-palette.scss";
+@import "./palettes/font-palette.scss";
+@import "./palettes/spacing-palette.scss";
+@import "./palettes/line-palette.scss";
+@import "./palettes/shadow-palette.scss";
 
 // Mixin Imports: Collections of mixins to include in the site specific styles
-@import "./cold-lib/mixins/flex.scss";
-@import "./cold-lib/mixins/utility.scss";
+@import "./mixins/flex.scss";
+@import "./mixins/utility.scss";
 
 // Component Imports: Styled Out-of-the-Box components that come with cold-lib
-@import "./cold-lib/components/styleguide.scss";
-@import "./cold-lib/components/header.scss";
-@import "./cold-lib/components/buttons.scss";
-@import "./cold-lib/components/forms.scss";
-@import "./cold-lib/components/footer.scss";
-@import "./cold-lib/components/fonts.scss";
-@import "./cold-lib/components/jumbotron.scss";
-@import "./cold-lib/components/article.scss";
-@import "./cold-lib/components/layout.scss";
+@import "./components/styleguide.scss";
+@import "./components/header.scss";
+@import "./components/buttons.scss";
+@import "./components/forms.scss";
+@import "./components/footer.scss";
+@import "./components/fonts.scss";
+@import "./components/jumbotron.scss";
+@import "./components/article.scss";
+@import "./components/layout.scss";
 
 // Page Imports: Full Pages applied to only a specific page
-@import "./cold-lib/pages/contact.scss";
-@import "./cold-lib/pages/work.scss";
-@import "./cold-lib/pages/resume.scss";
+@import "./pages/contact.scss";
+@import "./pages/work.scss";
+@import "./pages/resume.scss";
 
 @mixin center-article() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  article,
-  .article,
-  .article-center {
-    position: relative;
-    max-width: 1200px;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    article,
+    .article,
+    .article-center {
+        position: relative;
+        max-width: 1200px;
+    }
 }
 
 hr {
-  border: none;
+    border: none;
 }
