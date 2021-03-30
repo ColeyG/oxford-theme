@@ -11,7 +11,7 @@ function Header(props) {
 
   return (
     <header className="cl-primary-header">
-      <Link className="head-logo" href="/" onClick={refresh}>
+      <Link className="head-logo" to="/" onClick={refresh}>
         <h1>{props.mainTitle}</h1>
       </Link>
       <nav>
