@@ -5,8 +5,9 @@ import Jumbotron from '../components/jumbotron';
 import Footer from '../components/footer';
 
 const index = ({ data }) => {
-    const { allMarkdownRemark } = data;
+    const { allMarkdownRemark, allArticle } = data;
     const { edges } = allMarkdownRemark;
+    const articles = allArticle.edges;
 
     const featuredContent = [
         'GBA Demo', // TODO: Load featured content from a config
@@ -15,6 +16,7 @@ const index = ({ data }) => {
     ];
     const featuredContentPosts = [];
     const recentPosts = [];
+    const otherNeatArticles = [];
 
     function isFeaturedPost(postName, featuredContent) {
         return (featuredContent.indexOf(postName) > -1);
@@ -31,6 +33,14 @@ const index = ({ data }) => {
         }
     });
 
+    articles.forEach((article, index) => {
+        const node = article.node;
+
+        if (otherNeatArticles.length < 5) {
+            otherNeatArticles.push(<a key={index} href={node.link} target="_blank" rel="nofollow">{node.name}</a>);
+        }
+    });
+
     return (
         <div className="cl-wrapper">
             <div className="cl-page">
@@ -43,6 +53,10 @@ const index = ({ data }) => {
                 <h3>Recent Posts</h3>
                 <div className="article-container">
                     {recentPosts}
+                </div>
+                <h3>Other Neat Articles</h3>
+                <div className="article-container">
+                    {otherNeatArticles}
                 </div>
             </div>
             <Footer />
@@ -64,6 +78,15 @@ export const pageQuery = graphql`
           image
           type
         }
+      }
+    }
+  }
+  allArticle {
+    edges {
+      node {
+        id
+        link
+        name
       }
     }
   }
